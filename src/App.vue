@@ -22,7 +22,7 @@ export default {
 
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Roboto|Suez+One');
+  @import url('https://fonts.googleapis.com/css?family=Suez+One');
   @import './assets/variables.scss';
   #app {
     font-family: 'Suez One', monospace, sans-serif;
