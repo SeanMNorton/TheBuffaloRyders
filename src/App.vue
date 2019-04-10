@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <p>Logo Header Component</p>
-    <Navigation/>
+    <Header/>
     <router-view/>
     <p>Footer Component</p>
   </div>
 </template>
 
-<script>
-  import Navigation from '@/components/Navigation.vue';
 
-  export default {
-    name: 'App',
-    components: {
-      Navigation
-    }
-  };
+<script>
+import Header from '@/components/Header/Header.vue';
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+  },
+};
 </script>
 
+
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Roboto|Suez+One');
+  @import './assets/variables.scss';
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Suez One', monospace, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  }
+  html {
+    background-color: $color-black;
+    color: $color-yellow;
+    a {
+      color: $color-yellow;
+      text-decoration: none;
+      &:hover{
+        color: $color-orange
+      }
+    }
   }
 </style>

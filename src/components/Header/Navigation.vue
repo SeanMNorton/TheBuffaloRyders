@@ -1,0 +1,74 @@
+<template>
+  <Slide>
+    <router-link to="/">Home</router-link>
+    <router-link to="/music">Music</router-link>
+  </Slide>
+</template>
+
+
+<script>
+import { Slide } from 'vue-burger-menu';
+import menu from '../../assets/menu.svg';
+
+export default {
+  name: 'Navigation',
+  components: {
+    Slide,
+  },
+  data() {
+    return {
+      menuSvg: menu,
+    };
+  },
+};
+</script>
+
+
+<style lang="scss">
+  @import '../../assets/variables.scss';
+    .bm-burger-button {
+      &:hover {
+        .bm-burger-bars {
+          background-color: $color-orange;
+        }
+      }
+    }
+    .bm-burger-bars {
+      background-color: $color-yellow;
+      border-radius: 8px;
+    }
+    .bm-cross {
+      background: $color-yellow;
+    }
+    .bm-menu {
+      background-color: lighten($color-black, 10%); /* Black*/
+    }
+    .bm-item-list {
+      color: $color-yellow;
+      font-size: 1.5em;
+    }
+</style>
+
+<style scoped lang="scss">
+  @import '../../assets/variables.scss';
+  // .mobile-nav {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  // }
+  // .menu-button {
+  //   padding: 0 20px;
+  //   height: 6vh;
+  //   max-height: 100px;
+  //   min-height: 40px;
+  //   &:hover {
+  //     path {
+  //       fill: $color-orange;
+  //     }
+  //     cursor: pointer;
+  //   }
+  //   path {
+  //     fill: $color-yellow;
+  //   }
+  // }
+</style>
