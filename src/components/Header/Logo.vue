@@ -21,6 +21,8 @@ export default {
 
 
 <style scoped lang="scss">
+    @import '../../assets/variables.scss';
+
     .logo {
         display: flex;
         justify-content: center;
@@ -31,6 +33,14 @@ export default {
             height: 30vw;
             max-height: 100px;
             box-sizing: border-box;
+        }
+    }
+
+    @media(min-width: $break-point) {
+        .logo {
+            img {
+                max-height: 150px;
+             }
         }
     }
 </style>

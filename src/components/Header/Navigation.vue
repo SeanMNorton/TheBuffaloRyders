@@ -1,8 +1,8 @@
 <template>
-  <Slide>
-    <router-link to="/">Home</router-link>
-    <router-link to="/music">Music</router-link>
-  </Slide>
+    <Slide>
+      <router-link to="/">Home</router-link>
+      <router-link to="/music">Music</router-link>
+    </Slide>
 </template>
 
 
@@ -46,6 +46,13 @@ export default {
     .bm-item-list {
       color: $color-yellow;
       font-size: 1.5em;
+    }
+
+    @media(min-width: $break-point) {
+        .bm-burger-button {
+          top: 70px;
+          left: 70px;
+        }
     }
 </style>
 
