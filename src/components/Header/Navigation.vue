@@ -34,7 +34,7 @@ export default {
       }
     }
     .bm-burger-bars {
-      background-color: $color-yellow;
+      background-color: $color-yellow !important;
       border-radius: 8px;
     }
     .bm-cross {
