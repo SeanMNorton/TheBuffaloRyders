@@ -1,25 +1,35 @@
 <template>
   <div class="footer">
     <div class="container">
-      <font-awesome-icon :icon="['fab', 'instagram']" size="2x" />
-      <font-awesome-icon :icon="['fab', 'facebook']" size="2x"/>
+      <BrandLink :url="urls.instagram" :name="'instagram'"/>
+      <BrandLink :url="urls.facebook" :name="'facebook'"/>
+      <!-- TODO: Make this a mail-to link or use postmark -->
       <h2>Book Now</h2>
-      <font-awesome-icon :icon="['fab', 'youtube']" size="2x"/>
-      <font-awesome-icon :icon="['fab', 'bandcamp']" size="2x"/>
+      <BrandLink :url="urls.youtube" :name="'youtube'"/>
+      <BrandLink :url="urls.bandcamp" :name="'bandcamp'"/>
     </div>
   </div>
 </template>
 
 
 <script>
+import { mapState } from 'vuex';
+import BrandLink from '../UI/BrandLink/BrandLink.vue';
+
 export default {
   name: 'Footer',
+  components: {
+    BrandLink,
+  },
+  computed: mapState({
+    urls: state => state.socialUrls,
+  }),
 };
 </script>
 
 
 <style scoped lang="scss">
-    @import '../../assets/variables.scss';
+    @import '@/assets/variables.scss';
     .footer {
       padding: 0px 20px;
       width: 100vw;
@@ -35,8 +45,5 @@ export default {
       justify-content: space-between;
       align-items: center;
       max-width: 800px;
-    }
-    svg:hover {
-      color: $color-orange;
     }
 </style>

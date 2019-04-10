@@ -1,0 +1,25 @@
+<template>
+  <a :href="url" target="_blank" rel="noopener noreferrer">
+    <font-awesome-icon :icon="['fab', name]" size="2x" />
+  </a>
+</template>
+
+
+<script>
+export default {
+  name: 'BrandLink',
+  props: {
+    url: String,
+    name: String,
+  },
+
+};
+</script>
+
+
+<style scoped lang="scss">
+  @import '@/assets/variables.scss';
+  svg:hover {
+    color: $color-orange;
+  }
+</style>
