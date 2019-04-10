@@ -29,7 +29,7 @@ export default {
     .bm-burger-button {
       &:hover {
         .bm-burger-bars {
-          background-color: $color-orange;
+          background-color: $color-orange !important;
         }
       }
     }
