@@ -24,6 +24,6 @@ export default {
 <style scoped lang="scss">
   @import '@/assets/variables.scss';
   svg:hover {
-    color: $color-orange;
+    color: $color-secondary;
   }
 </style>

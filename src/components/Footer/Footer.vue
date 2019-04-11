@@ -38,9 +38,9 @@ export default {
       padding: 0px 20px;
       width: 100vw;
       min-height: 50px;
-      background-color: lighten($color-black, 10%);
+      background-color: $color-background-lighter;
       box-sizing: border-box;
-      margin-top: 200px;
+      // margin-top: 200px;
     }
     .container {
       display: flex;

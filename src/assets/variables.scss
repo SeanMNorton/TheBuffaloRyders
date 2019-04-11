@@ -1,11 +1,11 @@
 $break-point: 850px;
 
-$color-black: black;
-$color-lighter-black: lighten($color-black, 10%);
+$color-background: black;
+$color-background-lighter: lighten($color-background, 10%);
 $color-white: #fff;
-$color-yellow: #FEDC32;
-$color-orange: #aa4919;
-$color-red: #E75A3A;
+$color-primary: #FEDC32;
+$color-secondary: #aa4919;
+$color-danger: #E75A3A;
 
 $border-radius: 0.3em;
 

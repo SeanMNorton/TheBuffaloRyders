@@ -53,7 +53,7 @@ export default {
       max-width: 100vw;
       max-height: 56.25vw;
       box-sizing: border-box;
-      border: 3px solid $color-yellow;
+      border: 3px solid $color-primary;
     }
   }
 

@@ -35,22 +35,22 @@ export default {
     .bm-burger-button {
       &:hover {
         .bm-burger-bars {
-          background-color: $color-orange !important;
+          background-color: $color-secondary !important;
         }
       }
     }
     .bm-burger-bars {
-      background-color: $color-yellow !important;
+      background-color: $color-primary !important;
       border-radius: 8px;
     }
     .bm-cross {
-      background: $color-yellow;
+      background: $color-primary;
     }
     .bm-menu {
-      background-color: lighten($color-black, 10%); /* Black*/
+      background-color: $color-background-lighter;
     }
     .bm-item-list {
-      color: $color-yellow;
+      color: $color-primary;
       font-size: 1.5em;
     }
 
@@ -76,12 +76,12 @@ export default {
   //   min-height: 40px;
   //   &:hover {
   //     path {
-  //       fill: $color-orange;
+  //       fill: $color-secondary;
   //     }
   //     cursor: pointer;
   //   }
   //   path {
-  //     fill: $color-yellow;
+  //     fill: $color-primary;
   //   }
   // }
 </style>
