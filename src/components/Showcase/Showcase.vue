@@ -7,11 +7,7 @@
     </div>
 <!-- Video Frame START -->
     <div class="iframe-container" v-if="showcase.isVideo">
-      <fulfilling-bouncing-circle-spinner
-        :animation-duration="2000"
-        :size="60"
-        color="#FEDC32"
-      />
+      <Spinner/>
       <iframe
         rel="preconnect"
         width='760'
@@ -28,13 +24,14 @@
 </template>
 
 <script>
-import { FulfillingBouncingCircleSpinner } from 'epic-spinners';
 import { mapState } from 'vuex';
+import Spinner from '../UI/Spinner/Spinner.vue';
+
 
 export default {
   name: 'showcase',
   components: {
-    FulfillingBouncingCircleSpinner,
+    Spinner,
   },
   computed: {
     embededUrl() {
