@@ -10,6 +10,7 @@
         width='760'
         height='515'
         :src='this.embededUrl'
+        :title="showcase.description"
         frameborder='0'
         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
         allowfullscreen>
