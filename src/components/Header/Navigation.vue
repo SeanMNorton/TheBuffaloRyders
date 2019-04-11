@@ -1,8 +1,14 @@
 <template>
-    <Slide>
+  <div>
+    <Slide class="mobile">
       <router-link to="/">Home</router-link>
       <router-link to="/music">Music</router-link>
     </Slide>
+    <!-- <div class="desktop">
+      <router-link to="/">Home</router-link>
+      <router-link to="/music">Music</router-link>
+    </div> -->
+  </div>
 </template>
 
 

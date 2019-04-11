@@ -11,6 +11,11 @@ export default new Vuex.Store({
       youtube: 'https://www.youtube.com/channel/UCkIsdG0MQnU8HkVqWLYPyWw',
       bandcamp: 'https://joerisdon.bandcamp.com/',
     },
+    showcase: {
+      isVideo: true,
+      description: 'Live From ARC',
+      url: 'https://www.youtube.com/watch?v=6Q4u_PBnNew',
+    },
   },
   mutations: {
 

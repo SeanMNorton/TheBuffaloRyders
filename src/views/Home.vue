@@ -1,11 +1,20 @@
 <template>
   <div class="home">
-    <h1 style="text-align: center;">This is a Home Page</h1>
+    <Showcase
+      :isVideo="true"
+      :description="'Live From ARC'"
+      :url="'https://www.youtube.com/watch?v=6Q4u_PBnNew'"
+    />
   </div>
 </template>
 
 <script>
+import Showcase from '@/components/Showcase/Showcase.vue';
+
 export default {
   name: 'home',
+  components: {
+    Showcase,
+  },
 };
 </script>

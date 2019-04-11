@@ -33,11 +33,10 @@ export default {
     .footer {
       padding: 0px 20px;
       width: 100vw;
-      position: absolute;
-      bottom: 0;
       min-height: 50px;
       background-color: lighten($color-black, 10%);
       box-sizing: border-box;
+      margin-top: 200px;
     }
     .container {
       display: flex;
