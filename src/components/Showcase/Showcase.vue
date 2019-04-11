@@ -1,8 +1,8 @@
 <template>
   <div class="container showcase">
     <div class="header">
-      <h1 v-if="showcase.isVideo">Watch NOW &darr;</h1>
-      <h1 v-if="!showcase.isVideo">Listen NOW &darr;</h1>
+      <h1 v-if="showcase.isVideo">Watch NOW</h1>
+      <h1 v-if="!showcase.isVideo">Listen NOW</h1>
       <h1>{{showcase.description}}</h1>
     </div>
     <div v-if="showcase.isVideo">
@@ -46,6 +46,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     iframe {
       max-width: 100vw;
       max-height: 56.25vw;
