@@ -26,13 +26,6 @@ export default {
 
 <style lang="scss">
   @import './assets/variables.scss';
-  @font-face {
-    font-family: 'Suez One';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
-  }
   #app {
     letter-spacing: 1.5px;
     -webkit-font-smoothing: antialiased;

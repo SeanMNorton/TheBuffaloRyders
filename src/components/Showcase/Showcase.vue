@@ -5,7 +5,13 @@
       <h1 v-if="!showcase.isVideo">Listen NOW</h1>
       <h1>{{showcase.description}}</h1>
     </div>
-    <div v-if="showcase.isVideo">
+<!-- Video Frame START -->
+    <div class="iframe-container" v-if="showcase.isVideo">
+      <fulfilling-bouncing-circle-spinner
+        :animation-duration="2000"
+        :size="60"
+        color="#FEDC32"
+      />
       <iframe
         rel="preconnect"
         width='760'
@@ -17,14 +23,19 @@
         allowfullscreen>
       </iframe>
     </div>
+<!-- Video Frame END -->
   </div>
 </template>
 
 <script>
+import { FulfillingBouncingCircleSpinner } from 'epic-spinners';
 import { mapState } from 'vuex';
 
 export default {
   name: 'showcase',
+  components: {
+    FulfillingBouncingCircleSpinner,
+  },
   computed: {
     embededUrl() {
       return this.showcase.url.replace('watch?v=', 'embed/');
@@ -55,6 +66,16 @@ export default {
       max-height: 56.25vw;
       box-sizing: border-box;
       border: 3px solid $color-primary;
+    }
+    .iframe-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .fulfilling-bouncing-circle-spinner {
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
 

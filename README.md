@@ -1,25 +1,8 @@
 # buffaloryders-vue
+This is a website for the band, The Buffalo Ryders.
 
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Technologies / Ideas Used:
+* [VueJS](https://vuejs.org/) , [VueRouter](https://router.vuejs.org/), [Vuex](https://vuex.vuejs.org/)
+* ['Epic Spinners'](https://madewithvuejs.com/epic-spinners)
+* [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/)

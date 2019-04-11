@@ -9,8 +9,15 @@ $color-danger: #E75A3A;
 
 $border-radius: 0.3em;
 
+@font-face {
+  font-family: 'Suez One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
+}
+
 // Widths/Sizes for Fluid-Type //
-// https://css-tricks.com/snippets/css/fluid-typography/
 $min-width: 300px;
 $max-width: 850px;
 $max-header-font: 70px;
