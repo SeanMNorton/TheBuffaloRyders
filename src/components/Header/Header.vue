@@ -26,7 +26,6 @@ export default {
         min-height: 10vh;
         max-height: 150px;
         display: flex;
-        // justify-content: space-between;
         flex-direction: row-reverse;
         padding: 10px;
         box-sizing: border-box;
@@ -36,5 +35,6 @@ export default {
         .header {
             display: inline;
         }
+
     }
 </style>

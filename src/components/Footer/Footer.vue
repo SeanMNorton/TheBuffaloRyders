@@ -30,6 +30,10 @@ export default {
 
 <style scoped lang="scss">
     @import '@/assets/variables.scss';
+    h2 {
+      text-align: center;
+      @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
+    }
     .footer {
       padding: 0px 20px;
       width: 100vw;
@@ -40,7 +44,8 @@ export default {
     }
     .container {
       display: flex;
-      margin: 0 auto;
+      margin: auto auto;
+      min-height: 50px;
       justify-content: space-between;
       align-items: center;
       max-width: 800px;

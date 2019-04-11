@@ -38,8 +38,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
-  .header {
-    font-size: 1.2em;
+  .header h1{
+    margin: 5px 0px;
+    @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
   }
   .showcase {
     display: flex;
@@ -48,6 +49,7 @@ export default {
     align-items: center;
     text-align: center;
     iframe {
+      margin-top: 5px;
       max-width: 100vw;
       max-height: 56.25vw;
       box-sizing: border-box;
@@ -56,8 +58,5 @@ export default {
   }
 
   @media(min-width: $break-point) {
-    .header {
-      font-size: 2em;
-    }
   }
 </style>

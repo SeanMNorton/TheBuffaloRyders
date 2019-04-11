@@ -39,7 +39,7 @@ export default {
     @media(min-width: $break-point) {
         .logo {
             img {
-                max-height: 150px;
+                max-height: 200px;
              }
         }
     }
