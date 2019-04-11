@@ -1,5 +1,9 @@
 <template>
-  <a :href="url" target="_blank" rel="noopener noreferrer">
+  <a
+    :href="url" target="_blank"
+    rel="noopener noreferrer"
+    :aria-label="'Vist our ' + name + '!'"
+  >
     <font-awesome-icon :icon="['fab', name]" size="2x" />
   </a>
 </template>

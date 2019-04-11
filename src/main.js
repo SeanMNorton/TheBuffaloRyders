@@ -1,6 +1,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faInstagram, faFacebook, faBandcamp, faYoutube,
+  faInstagram,
+  faFacebook,
+  faBandcamp,
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
