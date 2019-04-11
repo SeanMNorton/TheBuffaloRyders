@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     socialUrls: {
       facebook: 'https://www.facebook.com/JoeRisdonandThe815/',
-      instagram: 'https://www.instagram.com/joerisdonandthe815/',
+      instagram: 'https://www.instagram.com/JoeRisdonandThe815/',
       youtube: 'https://www.youtube.com/channel/UCkIsdG0MQnU8HkVqWLYPyWw',
       bandcamp: 'https://joerisdon.bandcamp.com/',
     },
