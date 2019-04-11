@@ -34,7 +34,6 @@ export default {
     src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
   }
   #app {
-    font-family: 'Suez One', Helvetica, monospace, sans-serif;
     letter-spacing: 1.5px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -42,6 +41,7 @@ export default {
     margin: 0 auto -50px;
   }
   html {
+    font-family: 'Suez One', Helvetica, monospace, sans-serif;
     background-color: $color-background;
     color: $color-primary;
     a {

@@ -7,6 +7,7 @@
     </div>
     <div v-if="showcase.isVideo">
       <iframe
+        rel="preconnect"
         width='760'
         height='515'
         :src='this.embededUrl'
