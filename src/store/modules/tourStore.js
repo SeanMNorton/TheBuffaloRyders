@@ -21,18 +21,23 @@ const tour = {
       },
       {
         artist: 'Joe Risdon and The 815',
-        date: new Date('April 30, 2019'),
+        date: new Date('April 01, 2019'),
         time: '10:00 PM',
         venue: 'Musica',
-        city: 'Akron',
+        city: 'CLE',
         state: 'OH',
         info: 'W/ Jade Bird',
       },
     ],
   },
   getters: {
-    newGigs: state => state.gigs.filter(gig => gig.date >= new Date()),
-    oldGigs: state => state.gigs.filter(gig => gig.date < new Date()),
+    newGigs: state => state.gigs
+      .filter(gig => gig.date >= new Date().setHours(0, 0, 0, 0))
+      .sort((a, b) => b.date - a.date),
+
+    oldGigs: state => state.gigs
+      .filter(gig => gig.date < new Date().setHours(0, 0, 0, 0))
+      .sort((a, b) => b.date - a.date),
   },
 };
 

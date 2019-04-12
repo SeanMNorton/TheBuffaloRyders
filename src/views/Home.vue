@@ -5,7 +5,7 @@
       :description="'Live From ARC'"
       :url="'https://www.youtube.com/watch?v=6Q4u_PBnNew'"
     />
-    <GigList :isNew='true'/>
+    <GigList :isNew='true' :limit='5'/>
   </div>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
   <div class="list-item">
     <p class="info">{{prettyDate(date)}}</p>
-    <p class="dots">.....................................................</p>
+    <p class="dots">
+      ....................................................................................
+    </p>
     <p class="info">{{city}}, {{state}}</p>
   </div>
 </template>
@@ -23,11 +25,14 @@ export default {
 
 <style lang="scss" scoped>
   @import '@/assets/variables.scss';
+    p {
+      margin: 0
+    }
   .list-item {
     display: flex;
     align-items: baseline;
     width: 100%;
-    max-width: 650px;
+    max-width: 850px;
     @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
 
   }
@@ -37,7 +42,7 @@ export default {
   .dots {
     flex: 1;
     margin: 0px;
-    font-size: 40px;
+    @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
     overflow: hidden;
   }
 </style>
