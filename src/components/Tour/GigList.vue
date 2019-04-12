@@ -5,7 +5,7 @@
     <h1>Future Gigs</h1>
     <div class="gig-list">
       <GigListItem
-        :key="index" v-for="(gig, index) in newerGigs"
+        :key="index" v-for="(gig, index) in newGigs"
         :date="gig.date" :city="gig.city"
         :state="gig.state"
       />

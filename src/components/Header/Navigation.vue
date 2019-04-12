@@ -30,6 +30,8 @@ export default {
 <style lang="scss">
   @import '../../assets/variables.scss';
     .bm-burger-button {
+      height: 20px;
+      width: 26px;
       &:hover {
         .bm-burger-bars {
           background-color: $color-secondary !important;
@@ -53,8 +55,16 @@ export default {
 
     @media(min-width: $break-point) {
         .bm-burger-button {
+          // position: fixed;
+          height: 30px;
+          width: 36px;
           top: 70px;
           left: 70px;
+        }
+    }
+    @media(min-width: $menu-break-point) {
+        .bm-burger-button {
+          position: fixed;
         }
     }
 </style>

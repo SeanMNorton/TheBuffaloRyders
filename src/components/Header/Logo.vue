@@ -31,7 +31,8 @@ export default {
             padding-top: 10px;
             padding-right: 20px;
             height: 30vw;
-            max-height: 100px;
+            max-height: 90px;
+            margin-bottom: 2vh;
             box-sizing: border-box;
         }
     }
@@ -39,7 +40,8 @@ export default {
     @media(min-width: $break-point) {
         .logo {
             img {
-                max-height: 200px;
+                max-height: 250px;
+                // margin-bottom: 50px;
              }
         }
     }
