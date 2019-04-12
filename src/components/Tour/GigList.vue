@@ -32,10 +32,10 @@ export default {
     };
   },
   computed: {
-    gigs () {
-      return this.$store.getters[this.gigsType].slice(0, this.limit)
-    }
-  }
+    gigs() {
+      return this.$store.getters[this.gigsType].slice(0, this.limit);
+    },
+  },
 };
 </script>
 
