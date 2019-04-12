@@ -28,6 +28,15 @@ const tour = {
         state: 'OH',
         info: 'W/ Jade Bird',
       },
+      {
+        artist: 'Joe Risdon and The 815',
+        date: new Date('May 30, 2019'),
+        time: '8:00 PM',
+        venue: 'Musica',
+        city: 'Akron',
+        state: 'OH',
+        info: 'W/ Shovels & Rope',
+      },
     ],
   },
   getters: {

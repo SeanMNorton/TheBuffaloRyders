@@ -4,8 +4,7 @@
       <h1>{{title}}</h1>
         <GigListItem
           :key="index" v-for="(gig, index) in gigs"
-          :date="gig.date" :city="gig.city"
-          :state="gig.state"
+          :gig="gig"
         />
         <h4 v-if="gigs.length <= 0">- None Listed -</h4>
     </div>
