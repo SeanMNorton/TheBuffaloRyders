@@ -1,6 +1,8 @@
 <template>
   <div class="logo">
-      <img :src="src" :alt="alt">
+      <router-link to="/">
+        <img :src="src" :alt="alt">
+      </router-link>
   </div>
 </template>
 
@@ -22,7 +24,6 @@ export default {
 
 <style scoped lang="scss">
     @import '../../assets/variables.scss';
-
     .logo {
         display: flex;
         justify-content: center;
@@ -34,6 +35,10 @@ export default {
             max-height: 90px;
             margin-bottom: 2vh;
             box-sizing: border-box;
+            &:hover {
+              opacity: 0.7;
+              filter: alpha(opacity=70);
+            }
         }
     }
 
@@ -41,7 +46,6 @@ export default {
         .logo {
             img {
                 max-height: 250px;
-                // margin-bottom: 50px;
              }
         }
     }
