@@ -9,7 +9,7 @@
     <div class="iframe-container" v-if="showcase.isVideo">
       <Spinner/>
       <iframe
-        rel="preconnect"
+        defer
         width='760'
         height='515'
         :src='this.embededUrl'

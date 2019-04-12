@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store from './store/store';
 import './registerServiceWorker';
 
 library.add(faInstagram, faFacebook, faBandcamp, faYoutube);

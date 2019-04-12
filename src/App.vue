@@ -35,6 +35,7 @@ export default {
   }
   html {
     font-family: 'Suez One', Helvetica, monospace, sans-serif;
+    text-transform: uppercase;
     background-color: $color-background;
     color: $color-primary;
     a {

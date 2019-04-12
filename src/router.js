@@ -14,10 +14,12 @@ export default new Router({
     {
       path: '/music',
       name: 'music',
-      // route level code-splitting
-      // this generates a separate chunk (music.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "music" */ './views/Music.vue'),
+    },
+    {
+      path: '/gigs',
+      name: 'tour',
+      component: () => import(/* webpackChunkName: "tour" */ './views/Tour.vue'),
     },
   ],
 });
