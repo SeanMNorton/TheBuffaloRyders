@@ -43,10 +43,10 @@ export default {
       border-radius: 8px;
     }
     .bm-cross {
-      background: $color-primary;
+      background: $color-primary !important;
     }
     .bm-menu {
-      background-color: $color-background-lighter;
+      background-color: $color-background-lighter !important;
     }
     .bm-item-list {
       color: $color-primary;

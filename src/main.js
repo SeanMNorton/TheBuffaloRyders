@@ -17,7 +17,6 @@ library.add(faInstagram, faFacebook, faBandcamp, faYoutube);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
-
 new Vue({
   router,
   store,
