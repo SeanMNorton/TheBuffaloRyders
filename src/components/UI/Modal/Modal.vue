@@ -40,7 +40,7 @@ export default {
   }
 
   .modal-wrapper {
-    width: 100%;
+    width: 90vw;
     max-width: 850px;
     z-index: 1;
     display: table-cell;
@@ -50,21 +50,19 @@ export default {
   .modal-container {
     display: flex;
     flex-direction: column;
-    max-width: 850px;
+    max-width: 95vw;
     margin: 0px auto;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: $color-background-lighter;
     border-radius: $border-radius;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     box-sizing: border-box;
   }
-
-  .modal-header h3 {
-    margin-top: 0;
-    color: #42b983;
+  .modal-header {
+    padding: 0px 1em;
+    @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
   }
-
   .modal-body {
     margin: 20px 0;
   }
@@ -92,4 +90,11 @@ export default {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
+   @media(min-width: $break-point) {
+    .modal-container {
+      max-width: $break-point;
+    }
+  }
+
 </style>

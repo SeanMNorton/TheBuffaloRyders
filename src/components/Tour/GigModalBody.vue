@@ -1,8 +1,8 @@
 <template>
   <div class="modal-body">
-    <!-- <div class="map-box">
+    <div class="map-box">
 
-    </div> -->
+    </div>
     <div class="show-info">
       <p class="date">{{prettyDate(gig.date)}} @ {{gig.time}}</p>
       <p>Artist: <span class='info'>{{gig.artist}}</span></p>
@@ -29,6 +29,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 50vh;
     @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
   }
   .map-box {
