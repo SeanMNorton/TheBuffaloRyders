@@ -1,6 +1,7 @@
 <template>
   <div class="modal-body">
     <div id="map-box" class="map-box">
+      <Spinner />
       <Map :place="gig.venue" :city="gig.city" :state="gig.state" />
     </div>
     <div class="show-info">
@@ -14,11 +15,13 @@
 
 <script>
 import Map from '../UI/Map/Map.vue';
+import Spinner from '../UI/Spinner/Spinner.vue';
 
 export default {
   name: 'gigModalBody',
   components: {
     Map,
+    Spinner,
   },
   props: ['gig'],
   methods: {
@@ -42,6 +45,17 @@ export default {
     width: 280px;
     height: 280px;
     border: 2px solid $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    iframe {
+      z-index: 200;
+    };
+    .fulfilling-bouncing-circle-spinner {
+        position: absolute;
+        z-index: 150;
+    };
   }
   .show-info {
     margin-top: 30px;

@@ -1,15 +1,16 @@
 <template>
   <iframe
-  width="280"
-  height="280"
-  frameborder="0"
-  style="border:0"
-  :src="mapsURL"
-  allowfullscreen>
+    width="280"
+    height="280"
+    frameborder="0"
+    style="border:0"
+    :src="mapsURL"
+    allowfullscreen>
   </iframe>
 </template>
 
 <script>
+
 export default {
   name: 'Map',
   props: {

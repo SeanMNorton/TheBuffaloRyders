@@ -29,7 +29,7 @@ export default {
   @import '@/assets/variables.scss';
   .modal-mask {
     position: fixed;
-    z-index: 9998;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100vw;
