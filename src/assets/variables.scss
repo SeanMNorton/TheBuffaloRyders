@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Suez One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
+}
+
+$primary-font: 'Suez One', Helvetica, monospace, sans-serif;
+$secondary-font: sans-serif;
+
 $break-point: 850px;
 $menu-break-point: 1111px;
 
@@ -9,14 +20,6 @@ $color-secondary: #aa4919;
 $color-danger: #E75A3A;
 
 $border-radius: 0.3em;
-
-@font-face {
-  font-family: 'Suez One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
-}
 
 // Widths/Sizes for Fluid-Type //
 $min-width: 300px;

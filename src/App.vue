@@ -34,7 +34,7 @@ export default {
     margin: 0 auto -50px;
   }
   html {
-    font-family: 'Suez One', Helvetica, monospace, sans-serif;
+    font-family: $primary-font;
     text-transform: uppercase;
     background-color: $color-background;
     color: $color-primary;

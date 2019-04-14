@@ -41,7 +41,7 @@ export default {
     margin-top: 30px;
   }
   .info {
-    font-family: sans-serif;
+    font-family: $secondary-font;
     letter-spacing: 0;
     font-weight: 300;
   }

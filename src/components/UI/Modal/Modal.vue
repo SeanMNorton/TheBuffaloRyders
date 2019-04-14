@@ -43,6 +43,8 @@ export default {
     width: 90vw;
     max-width: 850px;
     z-index: 1;
+    position: relative;
+    bottom: 10%;
     display: table-cell;
     vertical-align: middle;
   }
