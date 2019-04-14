@@ -1,7 +1,7 @@
 <template>
   <div class="modal-body">
-    <div class="map-box">
-
+    <div id="map-box" class="map-box">
+      <Map :place="gig.venue" :city="gig.city" :state="gig.state" />
     </div>
     <div class="show-info">
       <p class="date">{{prettyDate(gig.date)}} @ {{gig.time}}</p>
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+import Map from '../UI/Map/Map.vue';
+
 export default {
   name: 'gigModalBody',
+  components: {
+    Map,
+  },
   props: ['gig'],
   methods: {
     prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getDate()}`,
@@ -33,8 +38,8 @@ export default {
     @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
   }
   .map-box {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 2px solid $color-primary;
   }
   .show-info {
