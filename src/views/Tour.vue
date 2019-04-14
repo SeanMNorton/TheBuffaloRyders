@@ -1,5 +1,5 @@
 <template>
-  <div class="tour">
+  <div class="tour" @click="secret()">
     <GigList :isNew="true" :limit='25'/>
     <GigList :isNew="false" :limit='25'/>
   </div>
@@ -13,6 +13,12 @@ export default {
   name: 'tour',
   components: {
     GigList,
+  },
+  methods: {
+    secret() {
+      console.log('tacos');
+      console.log(process.env.VUE_APP_SECRET);
+    },
   },
 };
 </script>
