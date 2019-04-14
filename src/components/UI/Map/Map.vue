@@ -1,7 +1,7 @@
 <template>
   <iframe
-  width="300"
-  height="300"
+  width="280"
+  height="280"
   frameborder="0"
   style="border:0"
   :src="mapsURL"

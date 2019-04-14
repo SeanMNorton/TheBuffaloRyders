@@ -47,6 +47,7 @@ export default {
     bottom: 0%;
     display: table-cell;
     vertical-align: middle;
+
   }
 
   .modal-container {
@@ -93,7 +94,7 @@ export default {
     transform: scale(1.1);
   }
 
-  @media(min-width: 350px) {
+  @media(min-height: 645px) {
     .modal-wrapper {
       bottom: 10%;
     }

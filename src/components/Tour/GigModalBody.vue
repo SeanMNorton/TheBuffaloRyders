@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
   @import '@/assets/variables.scss';
   .modal-body {
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,8 +39,8 @@ export default {
     @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
   }
   .map-box {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border: 2px solid $color-primary;
   }
   .show-info {
