@@ -32,8 +32,8 @@ export default {
     z-index: 9998;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(49, 49, 49, 0.7);
     display: table;
     transition: opacity .3s ease;
@@ -44,7 +44,7 @@ export default {
     max-width: 850px;
     z-index: 1;
     position: relative;
-    bottom: 10%;
+    bottom: 0%;
     display: table-cell;
     vertical-align: middle;
   }
@@ -91,6 +91,12 @@ export default {
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  }
+
+  @media(min-width: 350px) {
+    .modal-wrapper {
+      bottom: 10%;
+    }
   }
 
    @media(min-width: $break-point) {
