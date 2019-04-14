@@ -9,7 +9,6 @@ export default new Vuex.Store({
     tour,
   },
   state: {
-
     socialUrls: {
       facebook: 'https://www.facebook.com/JoeRisdonandThe815/',
       instagram: 'https://www.instagram.com/JoeRisdonandThe815/',

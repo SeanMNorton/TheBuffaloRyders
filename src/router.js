@@ -5,6 +5,7 @@ import Home from './views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -20,6 +21,10 @@ export default new Router({
       path: '/gigs',
       name: 'tour',
       component: () => import(/* webpackChunkName: "tour" */ './views/Tour.vue'),
+    },
+    {
+      path: '/*',
+      component: () => import(/* webpackChunkName: "tour" */ './views/FourOhFour.vue'),
     },
   ],
 });
