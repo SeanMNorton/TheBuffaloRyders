@@ -1,11 +1,15 @@
 <template>
-  <div>
+  <div v-if="!isDashboard">
     <div id="app">
         <Header/>
         <router-view/>
         <div class="push"></div>
     </div>
     <Footer/>
+  </div>
+
+  <div v-else>
+    <router-view/>
   </div>
 </template>
 
@@ -19,6 +23,11 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  computed: {
+    isDashboard() {
+      return this.$route.name === 'dashboard';
+    },
   },
 };
 </script>

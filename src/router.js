@@ -23,8 +23,13 @@ export default new Router({
       component: () => import(/* webpackChunkName: "tour" */ './views/Tour.vue'),
     },
     {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import(/* webpackChunkName: "dashboard" */ './views/Dashboard.vue'),
+    },
+    {
       path: '/*',
-      component: () => import(/* webpackChunkName: "tour" */ './views/FourOhFour.vue'),
+      component: () => import(/* webpackChunkName: "404" */ './views/FourOhFour.vue'),
     },
   ],
 });
