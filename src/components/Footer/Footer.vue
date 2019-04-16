@@ -1,19 +1,22 @@
 <template>
   <div class="footer">
     <div class="container">
-      <BrandLink :url="urls.instagram" :name="'instagram'"/>
-      <BrandLink :url="urls.facebook" :name="'facebook'"/>
-      <!-- TODO: Make this a mail-to link or use postmark -->
       <h2>Book Now</h2>
-      <BrandLink :url="urls.youtube" :name="'youtube'"/>
-      <BrandLink :url="urls.bandcamp" :name="'bandcamp'"/>
+      <div class="brands">
+          <BrandLink
+            :key="url.siteName"
+            v-for="url in urls"
+            :url="url.url"
+            :name="url.siteName"
+         />
+      </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import { mapState } from 'vuex';
+import { GET_URLS } from '../../queries';
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
 
 export default {
@@ -21,9 +24,9 @@ export default {
   components: {
     BrandLink,
   },
-  computed: mapState({
-    urls: state => state.socialUrls,
-  }),
+  apollo: {
+    urls: GET_URLS,
+  },
 };
 </script>
 
@@ -48,6 +51,9 @@ export default {
       min-height: 50px;
       justify-content: space-between;
       align-items: center;
-      max-width: 800px;
+      // max-width: 800px;
+    }
+    .brands > * {
+      padding: 0 2vw;
     }
 </style>

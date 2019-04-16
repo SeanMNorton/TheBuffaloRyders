@@ -1,23 +1,32 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faInstagram,
-  faFacebook,
-  faBandcamp,
-  faYoutube,
+  faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import VueApollo from 'vue-apollo';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store/store';
 import './registerServiceWorker';
+import ApolloProvider from './apolloSetup';
 
-library.add(faInstagram, faFacebook, faBandcamp, faYoutube);
+
+// Apollo Setup
+const apolloProvider = ApolloProvider();
+Vue.use(VueApollo);
+
+
+// Fontawesome Setup
+library.add(faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
+
+// Vue app setup
 Vue.config.productionTip = false;
 new Vue({
+  apolloProvider,
   router,
   store,
   render: h => h(App),
