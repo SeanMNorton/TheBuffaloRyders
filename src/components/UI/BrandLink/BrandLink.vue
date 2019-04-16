@@ -1,5 +1,6 @@
 <template>
   <a
+    v-if="hasUrl"
     :href="url" target="_blank"
     rel="noopener noreferrer"
     :aria-label="'Vist our ' + name + '!'"
@@ -16,7 +17,11 @@ export default {
     url: String,
     name: String,
   },
-
+  computed: {
+    hasUrl() {
+      return this.url !== null;
+    },
+  },
 };
 </script>
 
