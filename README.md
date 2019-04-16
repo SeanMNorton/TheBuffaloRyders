@@ -9,3 +9,4 @@ This is a website for the band, The Buffalo Ryders.
 * ['Epic Spinners'](https://madewithvuejs.com/epic-spinners)
 * [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/)
 * [GraphCMS](https://graphcms.com/)
+* [Vue Apollo] (https://vue-apollo.netlify.com/)
