@@ -32,3 +32,25 @@ export const GET_GIGS = gql`
     }
   }
 `;
+
+export const GET_ALBUMS = gql`
+query content($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
+  albums: albums(where: $where, orderBy: $orderBy) {
+        id
+        title
+        spotify
+        itunes
+        bandcamp
+        albumCover {
+          url
+          fileName
+          height
+          width
+        }
+        songs {
+          title
+          trackNumber
+        }
+      }
+    }
+`;

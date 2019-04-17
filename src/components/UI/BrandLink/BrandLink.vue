@@ -5,7 +5,7 @@
     rel="noopener noreferrer"
     :aria-label="'Vist our ' + name + '!'"
   >
-    <font-awesome-icon :icon="['fab', name]" size="2x" />
+    <font-awesome-icon :icon="['fab', name]" size="1x" />
   </a>
 </template>
 
@@ -30,5 +30,10 @@ export default {
   @import '@/assets/variables.scss';
   svg:hover {
     color: $color-secondary;
+  }
+  @media (min-width: $break-point) {
+    .fa-1x {
+      font-size: 2em;
+    }
   }
 </style>

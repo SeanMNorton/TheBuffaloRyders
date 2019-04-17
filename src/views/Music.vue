@@ -1,5 +1,47 @@
 <template>
-  <div class="Music">
-    <h1 style="text-align: center;">This is a Music page</h1>
+  <div class="music">
+    <h1 class="header" style="text-align: center;">Music</h1>
+    <div class="albums-container">
+      <Album
+        :key="album.id"
+        v-for="album in albums"
+        :album="album"
+      />
+    </div>
   </div>
 </template>
+
+<script>
+import { GET_ALBUMS } from '../queries';
+import Album from '../components/Albums/Album.vue';
+
+export default {
+  name: 'music',
+  components: {
+    Album,
+  },
+  apollo: {
+    $loadingKey: 'loading',
+    albums: {
+      query: GET_ALBUMS,
+      variables: { where: { AND: [] }, orderBy: 'releaseDate_DESC' },
+    },
+  },
+};
+</script>
+
+
+<style lang="scss" scoped>
+  @import '@/assets/variables.scss';
+  .header {
+    @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
+  }
+
+  .albums-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 850px;
+    margin: 0 auto;
+}
+</style>
