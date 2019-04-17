@@ -8,7 +8,7 @@ import VueApollo from 'vue-apollo';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store/store';
+// import store from './store/store';
 import './registerServiceWorker';
 import ApolloProvider from './apolloSetup';
 
@@ -28,6 +28,6 @@ Vue.config.productionTip = false;
 new Vue({
   apolloProvider,
   router,
-  store,
+  // store,
   render: h => h(App),
 }).$mount('#app');

@@ -5,7 +5,7 @@
       <Map :place="gig.venue" :city="gig.city" :state="gig.state" />
     </div>
     <div class="show-info">
-      <p class="date">{{prettyDate(gig.date)}} @ {{gig.time}}</p>
+      <p class="date">{{prettyDate(new Date(gig.date))}} @ {{gig.time}}</p>
       <p>Artist: <span class='info'>{{gig.artist}}</span></p>
       <p>Venue: <span class='info'>{{gig.venue}}, {{gig.city}} {{gig.state}}</span></p>
       <p>Info: <span class='info'>{{gig.info}}</span></p>

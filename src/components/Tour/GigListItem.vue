@@ -6,7 +6,7 @@
     </Modal>
 
     <div @click="openModal" class="list-item">
-      <p class="info">{{prettyDate(gig.date)}}</p>
+      <p class="info">{{prettyDate(new Date(gig.date))}}</p>
       <p class="dots">{{dots()}}</p>
       <p class="info">{{gig.city}}, {{gig.state}}</p>
     </div>
