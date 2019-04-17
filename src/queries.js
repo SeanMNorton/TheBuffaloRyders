@@ -10,8 +10,8 @@ export const GET_URLS = gql`
 `;
 
 export const GET_SHOWCASE = gql`
-  query showCases($where: ShowCaseWhereInput ) {
-    showcases: showCases(where: $where) {
+  query showcases($where: ShowcaseWhereInput ) {
+    showcases: showcases(where: $where) {
       isVideo
       url
       description
