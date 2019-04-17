@@ -9,7 +9,6 @@ export const GET_URLS = gql`
   }
 `;
 
-// not in use yet
 export const GET_SHOWCASE = gql`
   query showCases($where: ShowCaseWhereInput ) {
     showcases: showCases(where: $where) {
