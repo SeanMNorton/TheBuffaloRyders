@@ -1,12 +1,12 @@
 <template>
-  <div class="list-container">
+  <div class="list-container" v-if="realGigs.length > 0">
     <div class="gig-list">
       <h1>{{title}}</h1>
         <GigListItem
-          :key="index" v-for="(gig, index) in gigs"
+          :key="index" v-for="(gig, index) in realGigs"
           :gig="gig"
         />
-        <h4 v-if="gigs.length <= 0">- None Listed -</h4>
+        <h4 v-if="realGigs.length <= 0">- None Listed -</h4>
     </div>
   </div>
 </template>
@@ -14,6 +14,7 @@
 
 <script>
 import GigListItem from './GigListItem.vue';
+import { GET_GIGS } from '../../queries';
 
 export default {
   name: 'gigList',
@@ -24,15 +25,28 @@ export default {
     isNew: Boolean,
     limit: Number,
   },
+  apollo: {
+    $loadingKey: 'loading',
+    gigs: {
+      query: GET_GIGS,
+      variables() {
+        return {
+          where: { AND: [{ [this.isNew ? 'date_gte' : 'date_lt']: new Date() }] },
+          first: 25,
+          orderBy: this.isNew ? 'date_ASC' : 'date_DESC',
+        };
+      },
+    },
+  },
+
   data() {
     return {
       title: this.isNew ? 'Future Gigs' : 'Past Gigs',
-      gigsType: this.isNew ? 'newGigs' : 'oldGigs',
     };
   },
   computed: {
-    gigs() {
-      return this.$store.getters[this.gigsType].slice(0, this.limit);
+    realGigs() {
+      return this.gigs ? this.gigs : [];
     },
   },
 };
