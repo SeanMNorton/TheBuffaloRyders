@@ -8,7 +8,7 @@
             v-for="url in urls"
             :url="url.url"
             :name="url.siteName"
-         />
+          />
       </div>
     </div>
   </div>
@@ -54,6 +54,6 @@ export default {
       // max-width: 800px;
     }
     .brands > * {
-      padding: 0 2vw;
+      padding: 0 1vw;
     }
 </style>

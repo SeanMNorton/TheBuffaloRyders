@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud,
+  faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud, faSpotify, faItunes,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -19,7 +19,7 @@ Vue.use(VueApollo);
 
 
 // Fontawesome Setup
-library.add(faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud);
+library.add(faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud, faSpotify, faItunes);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 
