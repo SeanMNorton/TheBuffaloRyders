@@ -11,10 +11,11 @@ export const GET_URLS = gql`
 
 // not in use yet
 export const GET_SHOWCASE = gql`
-query {
-  showcases {
-    isVideo
-    url
-    description
+  query showCases($where: ShowCaseWhereInput ) {
+    showcases: showCases(where: $where) {
+      isVideo
+      url
+      description
+    }
   }
-}`;
+`;

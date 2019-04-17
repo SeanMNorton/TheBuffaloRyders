@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <Showcase
-      :isVideo="true"
-      :description="'Live From ARC'"
-      :url="'https://www.youtube.com/watch?v=6Q4u_PBnNew'"
-    />
+    <Showcase />
     <GigList :isNew='true' :limit='5'/>
     <h3><router-link class="tour-link" to="/gigs">All Gigs</router-link></h3>
   </div>

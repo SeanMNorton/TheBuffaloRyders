@@ -2,7 +2,7 @@
   <div class="container showcase">
     <div class="header">
       <h1 v-if="showcase.isVideo">Watch NOW</h1>
-      <h1 v-if="!showcase.isVideo">Listen NOW</h1>
+      <h1 v-if="!showcase.isVideo && showcase.url">Listen NOW</h1>
       <h1>{{showcase.description}}</h1>
     </div>
 <!-- Video Frame START -->
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import Spinner from '../UI/Spinner/Spinner.vue';
+import { GET_SHOWCASE } from '../../queries';
 
 
 export default {
@@ -33,13 +33,20 @@ export default {
   components: {
     Spinner,
   },
+  apollo: {
+    $loadingKey: 'loading',
+    showcases: {
+      query: GET_SHOWCASE,
+      variables: { where: { AND: [{ onDisplay: true }] } },
+    },
+  },
   computed: {
     embededUrl() {
       return this.showcase.url.replace('watch?v=', 'embed/');
     },
-    ...mapState({
-      showcase: state => state.showcase,
-    }),
+    showcase() {
+      return this.showcases ? this.showcases[0] : {};
+    },
   },
 };
 </script>

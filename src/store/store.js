@@ -9,11 +9,6 @@ export default new Vuex.Store({
     tour,
   },
   state: {
-    showcase: {
-      isVideo: true,
-      description: '"Live From ARC"',
-      url: 'https://www.youtube.com/watch?v=6Q4u_PBnNew',
-    },
   },
 
   mutations: {},
