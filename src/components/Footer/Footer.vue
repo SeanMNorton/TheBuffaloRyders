@@ -51,7 +51,11 @@ export default {
       min-height: 50px;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       // max-width: 800px;
+    }
+    .brands {
+      display: flex;
     }
     .brands > * {
       padding: 0 1vw;

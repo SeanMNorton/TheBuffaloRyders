@@ -1,8 +1,8 @@
 <template>
   <div class="album-container">
+    <h1 class="title">{{album.title}}</h1>
     <img v-if="album.albumCover" :src="album.albumCover.url" :alt="album.albumCover.filename">
-    <h1>{{album.title}}</h1>
-    <div class="brank-links">
+    <div class="brand-links">
       <BrandLink name="spotify" :url="album.spotify"/>
       <BrandLink name="itunes" :url="album.itunes"/>
       <BrandLink name="bandcamp" :url="album.bandcamp"/>
@@ -33,6 +33,14 @@ export default {
   .album-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .title {
+      @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
+      margin-bottom: 0;
+  }
+  .brand-links {
+    margin: 10px 0;
   }
   img {
     margin: 0 auto;
