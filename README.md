@@ -1,6 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/73b2495a-529b-49aa-abbf-6a7db3757e3e/deploy-status)](https://app.netlify.com/sites/focused-lichterman-107ffd/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/73b2495a-529b-49aa-abbf-6a7db3757e3e/deploy-status)](https://app.netlify.com/sites/thebuffaloryders/deploys)
 
-[Currently Deployed Here](https://focused-lichterman-107ffd.netlify.com/)
+[Currently Deployed Here](https://thebuffaloryders.netlify.com/#/)
 
 # buffaloryders-vue
 This is a website for the band, The Buffalo Ryders.
