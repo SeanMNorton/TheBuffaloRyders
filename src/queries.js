@@ -44,6 +44,7 @@ query content($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
         releaseDate
         info
         albumCover {
+          handle
           url
           fileName
           height
