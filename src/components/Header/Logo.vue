@@ -8,7 +8,7 @@
 
 
 <script>
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 export default {
   name: 'Logo',
@@ -45,7 +45,7 @@ export default {
     @media(min-width: $break-point) {
         .logo {
             img {
-                max-height: 250px;
+                max-height: 350px;
              }
         }
     }
