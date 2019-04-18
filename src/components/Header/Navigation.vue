@@ -5,6 +5,12 @@
       <router-link to="/music">Music</router-link>
       <router-link to="/gigs">Gigs</router-link>
     </Slide>
+
+    <div class="desktop">
+      <router-link to="/">Home</router-link>
+      <router-link to="/music">Music</router-link>
+      <router-link to="/gigs">Gigs</router-link>
+    </div>
   </div>
 </template>
 
@@ -29,6 +35,14 @@ export default {
 
 <style lang="scss">
   @import '../../assets/variables.scss';
+    .desktop {
+      display: none;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 0 auto;
+      margin-top: 20px;
+      @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
+    }
     .bm-burger-button {
       height: 20px;
       width: 26px;
@@ -54,41 +68,16 @@ export default {
     }
 
     @media(min-width: $break-point) {
-        .bm-burger-button {
-          // position: fixed;
-          height: 30px;
-          width: 36px;
-          top: 70px;
-          left: 70px;
-        }
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: flex;
+      }
     }
     @media(min-width: $menu-break-point) {
-        .bm-burger-button {
-          position: fixed;
-        }
+        // .bm-burger-button {
+        //   position: fixed;
+        // }
     }
-</style>
-
-<style scoped lang="scss">
-  @import '../../assets/variables.scss';
-  // .mobile-nav {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  // }
-  // .menu-button {
-  //   padding: 0 20px;
-  //   height: 6vh;
-  //   max-height: 100px;
-  //   min-height: 40px;
-  //   &:hover {
-  //     path {
-  //       fill: $color-secondary;
-  //     }
-  //     cursor: pointer;
-  //   }
-  //   path {
-  //     fill: $color-primary;
-  //   }
-  // }
 </style>

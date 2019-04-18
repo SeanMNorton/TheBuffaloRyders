@@ -43,5 +43,10 @@ export default {
     flex-wrap: wrap;
     max-width: 850px;
     margin: 0 auto;
-}
+  }
+  @media (min-width: $break-point) {
+    .header {
+      display: none;
+    }
+  }
 </style>

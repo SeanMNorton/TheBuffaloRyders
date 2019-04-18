@@ -84,5 +84,8 @@ export default {
   }
 
   @media(min-width: $break-point) {
+    .showcase {
+      margin-top: 5vh;
+    }
   }
 </style>

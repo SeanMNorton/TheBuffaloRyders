@@ -33,7 +33,6 @@ export default {
             padding-right: 20px;
             height: 30vw;
             max-height: 90px;
-            margin-bottom: 2vh;
             box-sizing: border-box;
             &:hover {
               opacity: 0.7;
