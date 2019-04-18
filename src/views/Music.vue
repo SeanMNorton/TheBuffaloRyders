@@ -39,7 +39,7 @@ export default {
 
   .albums-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 850px;
     margin: 0 auto;
@@ -47,6 +47,9 @@ export default {
   @media (min-width: $break-point) {
     .header {
       display: none;
+    }
+    .albums-container {
+      justify-content: space-around;
     }
   }
 </style>

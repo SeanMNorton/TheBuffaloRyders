@@ -51,6 +51,10 @@ export default {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    width: 45vw;
+    min-width: 140px;
+    max-width: 255px;
+    padding: 1vw;
     &:hover {
       cursor: pointer;
       color: $color-secondary;
@@ -80,5 +84,10 @@ export default {
   }
   a {
     padding-right: 20px;
+  }
+  @media (min-width: $break-point) {
+    .album-container {
+      padding: 0;
+    }
   }
 </style>
