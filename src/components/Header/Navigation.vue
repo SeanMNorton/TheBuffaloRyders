@@ -37,7 +37,7 @@ export default {
     $loadingKey: 'loading',
     urls: {
       query: GET_URLS,
-      variables: { where: { AND: {"siteName": "merch"} } },
+      variables: { where: { AND: { siteName: 'merch' } } },
     },
   },
 };
