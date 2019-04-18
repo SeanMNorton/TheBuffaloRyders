@@ -29,8 +29,14 @@ export default {
     };
   },
   methods: {
-    openModal() { this.showModal = true; },
-    close() { this.showModal = false; },
+    openModal() { 
+      this.showModal = true; 
+      document.getElementById('body').classList.add('no-scroll');
+    },
+    close() { 
+      this.showModal = false;
+      document.getElementById('body').classList.remove('no-scroll'); 
+    },
   },
 };
 </script>

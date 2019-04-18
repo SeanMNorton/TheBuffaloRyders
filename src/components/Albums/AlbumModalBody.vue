@@ -12,12 +12,14 @@
       <div class="text">
         <p>{{album.info}}</p>
       </div>
+
+      <div class="brand-links">
+        <BrandLink name="spotify" :url="album.spotify"/>
+        <BrandLink name="itunes" :url="album.itunes"/>
+        <BrandLink name="bandcamp" :url="album.bandcamp"/>
+      </div>
     </div>
-    <div class="brand-links">
-      <BrandLink name="spotify" :url="album.spotify"/>
-      <BrandLink name="itunes" :url="album.itunes"/>
-      <BrandLink name="bandcamp" :url="album.bandcamp"/>
-    </div>
+    
   </div>
 </template>
 
@@ -68,7 +70,10 @@ export default {
     text-align: center;
     margin-bottom: 3vh;
     @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
-
+  }
+  .song-list {
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
   }
   .song-list, .text {
     font-family: $secondary-font;
@@ -80,14 +85,34 @@ export default {
   }
   .brand-links {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
     &>a {
       padding: 0 10px;
     }
   }
-  @media( min-width: $break-point) {
+  @media( min-width: 650px) {
     .modal-body {
       flex-direction: row;
       justify-content: flex-start;
+    }
+    .album-info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+    }
+    .album-title {
+      @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
+    }
+
+    .album-box {
+      width: 280px;
+      height: 280px;
+      margin-left: 30px;
+      img {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 </style>
