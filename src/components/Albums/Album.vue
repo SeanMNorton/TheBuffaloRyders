@@ -6,7 +6,7 @@
 
     <div @click="openModal" class="album-container">
       <img v-if="album.albumCover"
-        :src="'https://media.graphcms.com/resize=width:350/compress/'+album.albumCover.handle"
+        :src="'https://media.graphcms.com/resize=width:255/compress/'+album.albumCover.handle"
         :alt="album.title + ' Album Art'"
       >
       <h1 class="title">{{album.title}}</h1>
@@ -71,19 +71,14 @@ export default {
   }
   img {
     margin: 0 auto;
-    height: 40vw;
-    width: 40vw;
-    min-width: 210px;
-    min-height: 210px;
+    height: 45vw;
+    width: 45vw;
+    min-width: 140px;
+    min-height: 140px;
+    max-width: 255px;
+    max-height: 255px;
   }
   a {
     padding-right: 20px;
-  }
-
-  @media (min-width: $break-point) {
-    img {
-      height: 350px;
-      width: 350px;
-    }
   }
 </style>
