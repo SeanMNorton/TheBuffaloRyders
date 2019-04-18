@@ -46,7 +46,7 @@ export default {
     bottom: 0%;
     display: table-cell;
     vertical-align: middle;
-    
+
   }
 
   .modal-container {

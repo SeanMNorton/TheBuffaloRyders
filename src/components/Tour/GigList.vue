@@ -1,5 +1,5 @@
 <template>
-  <div class="list-container" v-if="realGigs.length > 0">
+  <div class="list-container">
     <div class="gig-list">
       <h1>{{title}}</h1>
         <GigListItem

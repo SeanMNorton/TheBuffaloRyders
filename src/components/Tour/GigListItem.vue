@@ -33,13 +33,13 @@ export default {
   },
   methods: {
     prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getDate()}`,
-    openModal() { 
-      this.showModal = true; 
+    openModal() {
+      this.showModal = true;
       document.getElementById('body').classList.add('no-scroll');
     },
-    close() { 
-      this.showModal = false; 
-      document.getElementById('body').classList.remove('no-scroll'); 
+    close() {
+      this.showModal = false;
+      document.getElementById('body').classList.remove('no-scroll');
     },
     dots() { return Array(100).fill('.').join(''); },
   },

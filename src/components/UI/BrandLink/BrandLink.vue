@@ -1,6 +1,6 @@
 <template>
   <a
-    v-if="hasUrl"
+    v-if="hasUrl && name !== 'merch'"
     :href="url" target="_blank"
     rel="noopener noreferrer"
     :aria-label="'Vist our ' + name + '!'"
