@@ -57,3 +57,18 @@ query content($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
       }
     }
 `;
+
+export const GET_METADATA = gql`
+query content($where: MetaDataWhereInput) {
+  metaDatas: metaDatas(where: $where) {
+        id
+        title
+        description
+        url
+        image {
+          handle
+        }
+        page
+      }
+    }
+`;
