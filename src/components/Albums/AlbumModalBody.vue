@@ -2,7 +2,7 @@
   <div class="modal-body">
     <div id="album-box" class="album-box">
        <img v-if="album.albumCover"
-        :src="'https://media.graphcms.com/resize=width:250/'+album.albumCover.handle"
+        :src="'https://media.graphcms.com/resize=width:250/compress/'+album.albumCover.handle"
         :alt="album.title + ' Album art.'"
       >
     </div>

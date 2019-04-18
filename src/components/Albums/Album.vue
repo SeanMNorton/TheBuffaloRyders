@@ -6,7 +6,7 @@
 
     <div @click="openModal" class="album-container">
       <img v-if="album.albumCover"
-        :src="'https://media.graphcms.com/resize=width:350/'+album.albumCover.handle"
+        :src="'https://media.graphcms.com/resize=width:350/compress/'+album.albumCover.handle"
         :alt="album.title + ' Album Art'"
       >
       <h1 class="title">{{album.title}}</h1>
