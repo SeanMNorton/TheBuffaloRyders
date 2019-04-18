@@ -29,13 +29,13 @@ export default {
     };
   },
   methods: {
-    openModal() { 
-      this.showModal = true; 
+    openModal() {
+      this.showModal = true;
       document.getElementById('body').classList.add('no-scroll');
     },
-    close() { 
+    close() {
       this.showModal = false;
-      document.getElementById('body').classList.remove('no-scroll'); 
+      document.getElementById('body').classList.remove('no-scroll');
     },
   },
 };

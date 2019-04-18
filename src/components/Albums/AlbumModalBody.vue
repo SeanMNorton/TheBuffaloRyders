@@ -19,7 +19,7 @@
         <BrandLink name="bandcamp" :url="album.bandcamp"/>
       </div>
     </div>
-    
+
   </div>
 </template>
 

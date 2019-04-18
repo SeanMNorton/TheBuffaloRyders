@@ -2,14 +2,17 @@
   <div>
     <Slide class="mobile">
       <router-link to="/">Home</router-link>
-      <router-link to="/music">Music</router-link>
       <router-link to="/gigs">Gigs</router-link>
+      <router-link to="/music">Music</router-link>
+      <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
     </Slide>
 
     <div class="desktop">
-      <router-link to="/">Home</router-link>
-      <router-link to="/music">Music</router-link>
+      <!-- <router-link to="/">Home</router-link> -->
       <router-link to="/gigs">Gigs</router-link>
+      <router-link to="/music">Music</router-link>
+      <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
+
     </div>
   </div>
 </template>
@@ -18,6 +21,7 @@
 <script>
 import { Slide } from 'vue-burger-menu';
 import menu from '../../assets/menu.svg';
+import { GET_URLS } from '../../queries';
 
 export default {
   name: 'Navigation',
@@ -28,6 +32,13 @@ export default {
     return {
       menuSvg: menu,
     };
+  },
+  apollo: {
+    $loadingKey: 'loading',
+    urls: {
+      query: GET_URLS,
+      variables: { where: { AND: {"siteName": "merch"} } },
+    },
   },
 };
 </script>

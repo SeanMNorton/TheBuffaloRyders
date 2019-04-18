@@ -1,8 +1,8 @@
 import { gql } from 'apollo-boost';
 
 export const GET_URLS = gql`
-  query {
-    urls {
+  query urls($where: UrlWhereInput) {
+    urls: urls(where: $where) {
       url
       siteName
     }
