@@ -1,5 +1,6 @@
 <template>
   <div class="music">
+    <MetaData v-if="metaDatas" :data="metaDatas[0]"/>
     <h1 class="header" style="text-align: center;">Music</h1>
     <div class="albums-container">
       <Album
@@ -12,19 +13,25 @@
 </template>
 
 <script>
-import { GET_ALBUMS } from '../queries';
+import { GET_ALBUMS, GET_METADATA } from '../queries';
+import MetaData from '@/components/UI/MetaData/MetaData.vue';
 import Album from '../components/Albums/Album.vue';
 
 export default {
   name: 'music',
   components: {
     Album,
+    MetaData,
   },
   apollo: {
     $loadingKey: 'loading',
     albums: {
       query: GET_ALBUMS,
       variables: { where: { AND: [] }, orderBy: 'releaseDate_DESC' },
+    },
+    metaDatas: {
+      query: GET_METADATA,
+      variables: { where: { AND: [{ page: 'music' }] } },
     },
   },
 };
