@@ -20,18 +20,12 @@
 
 <script>
 import { Slide } from 'vue-burger-menu';
-import menu from '../../assets/menu.svg';
 import { GET_URLS } from '../../queries';
 
 export default {
   name: 'Navigation',
   components: {
     Slide,
-  },
-  data() {
-    return {
-      menuSvg: menu,
-    };
   },
   apollo: {
     $loadingKey: 'loading',
