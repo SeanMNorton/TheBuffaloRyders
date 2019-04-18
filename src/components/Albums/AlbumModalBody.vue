@@ -1,7 +1,10 @@
 <template>
   <div class="modal-body">
     <div id="album-box" class="album-box">
-       <img v-if="album.albumCover" :src="album.albumCover.url" :alt="album.albumCover.filename">
+       <img v-if="album.albumCover"
+        :src="album.albumCover.url"
+        :alt="album.title + ' Album art.'"
+      >
     </div>
     <div class="album-info">
       <p class="album-title">{{album.title}}  ({{getYear(album.releaseDate)}})</p>

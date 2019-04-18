@@ -5,7 +5,10 @@
     </Modal>
 
     <div @click="openModal" class="album-container">
-      <img v-if="album.albumCover" :src="album.albumCover.url" :alt="album.albumCover.filename">
+      <img v-if="album.albumCover"
+        :src="album.albumCover.url"
+        :alt="album.title + ' Album Art'"
+      >
       <h1 class="title">{{album.title}}</h1>
     </div>
   </div>
