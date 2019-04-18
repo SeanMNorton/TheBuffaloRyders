@@ -3,6 +3,7 @@ import {
   faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud, faSpotify, faItunes,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import Meta from 'vue-meta';
 
 import VueApollo from 'vue-apollo';
 import Vue from 'vue';
@@ -16,6 +17,7 @@ import ApolloProvider from './apolloSetup';
 // Apollo Setup
 const apolloProvider = ApolloProvider();
 Vue.use(VueApollo);
+Vue.use(Meta);
 
 
 // Fontawesome Setup

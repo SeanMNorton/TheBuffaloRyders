@@ -1,15 +1,5 @@
 <template>
-  <div>
-    <meta property="og:title" :content="data.title">
-    <meta property="og:description" :content="data.description">
-    <meta property="og:image" :content="'https://media.graphcms.com/resize=width:255/compress/'+data.image.handle">
-    <meta property="og:url" :content="data.url">
-
-    <meta name="twitter:title" :content="data.title">
-    <meta name="twitter:description" :content="data.description">
-    <meta name="twitter:image" :content="'https://media.graphcms.com/resize=width:255/compress/'+data.image.handle">
-    <meta name="twitter:card" content="summary_large_image">
-  </div>
+  <div></div>
 </template>
 
 
@@ -17,5 +7,20 @@
 export default {
   name: 'MetaData',
   props: ['data'],
+  metaInfo() {
+    return {
+      title: 'The Buffalo Ryders',
+      meta: [
+        { name: 'og:title', content: this.data.title },
+        { name: 'og:description', content: this.data.description },
+        { name: 'og:image', content: `'https://media.graphcms.com/compress/'${this.data.image.handle}` },
+        { name: 'og:url', content: this.data.url },
+        { name: 'twitter:title', content: this.data.title },
+        { name: 'twitter:description', content: this.data.description },
+        { name: 'twitter:image', content: `'https://media.graphcms.com/compress/'${this.data.image.handle}` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+    };
+  },
 };
 </script>
