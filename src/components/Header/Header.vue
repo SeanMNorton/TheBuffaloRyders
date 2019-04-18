@@ -1,7 +1,7 @@
 <template>
   <div class="header">
       <Navigation/>
-      <Logo/>
+      <Logo />
   </div>
 </template>
 
@@ -33,7 +33,11 @@ export default {
 
     @media(min-width: $break-point) {
         .header {
-            display: inline;
+            // display: inline;
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            max-height: unset;
         }
 
     }

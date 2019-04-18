@@ -1,29 +1,43 @@
 <template>
-  <div class="album-container">
-    <h1 class="title">{{album.title}}</h1>
-    <img v-if="album.albumCover" :src="album.albumCover.url" :alt="album.albumCover.filename">
-    <div class="brand-links">
-      <BrandLink name="spotify" :url="album.spotify"/>
-      <BrandLink name="itunes" :url="album.itunes"/>
-      <BrandLink name="bandcamp" :url="album.bandcamp"/>
+  <div>
+    <Modal v-if="showModal" @close="close" :header="''">
+      <AlbumModalBody :album="album" />
+    </Modal>
+
+    <div @click="openModal" class="album-container">
+      <img v-if="album.albumCover" :src="album.albumCover.url" :alt="album.albumCover.filename">
+      <h1 class="title">{{album.title}}</h1>
     </div>
-    <!-- <h3>{{album.artist.name}}</h3> -->
-    <!-- <div :key="i" v-for="(song, i) in album.songs">
-      <p>{{song.trackNumber}}) {{song.title}}</p>
-    </div> -->
   </div>
 </template>
 
 
 <script>
-import BrandLink from '../UI/BrandLink/BrandLink.vue';
+import Modal from '../UI/Modal/Modal.vue';
+import AlbumModalBody from './AlbumModalBody.vue';
 
 export default {
   name: 'album',
   components: {
-    BrandLink,
+    Modal,
+    AlbumModalBody,
   },
   props: ['album'],
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+  methods: {
+    openModal() { 
+      this.showModal = true; 
+      document.getElementById('body').classList.add('no-scroll');
+    },
+    close() { 
+      this.showModal = false;
+      document.getElementById('body').classList.remove('no-scroll'); 
+    },
+  },
 };
 </script>
 
@@ -34,18 +48,30 @@ export default {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    &:hover {
+      cursor: pointer;
+      color: $color-secondary;
+      img {
+        opacity: 0.9;
+        filter: alpha(opacity=90);
+      }
+    }
   }
   .title {
       @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
       margin-bottom: 0;
+      margin-top: 2px;
+      text-align: center;
   }
   .brand-links {
     margin: 10px 0;
   }
   img {
     margin: 0 auto;
-    height: 280px;
-    width: 280px;
+    height: 40vw;
+    width: 40vw;
+    min-width: 210px;
+    min-height: 210px;
   }
   a {
     padding-right: 20px;

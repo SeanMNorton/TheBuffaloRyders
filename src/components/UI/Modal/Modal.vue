@@ -24,7 +24,6 @@ export default {
 };
 </script>
 
-
 <style scoped lang="scss">
   @import '@/assets/variables.scss';
   .modal-mask {
@@ -47,7 +46,7 @@ export default {
     bottom: 0%;
     display: table-cell;
     vertical-align: middle;
-
+    
   }
 
   .modal-container {
@@ -56,11 +55,13 @@ export default {
     max-width: 95vw;
     margin: 0px auto;
     padding: 10px 10px;
+    max-height: 95vh;
     background-color: $color-background-lighter;
     border-radius: $border-radius;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     box-sizing: border-box;
+    overflow: hidden;
   }
   .modal-header {
     padding: 0px 1em;
@@ -68,6 +69,7 @@ export default {
   }
   .modal-body {
     margin: 20px 0;
+    overflow-y: auto;
   }
 
   .modal-default-button {

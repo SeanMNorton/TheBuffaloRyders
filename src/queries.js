@@ -41,6 +41,8 @@ query content($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
         spotify
         itunes
         bandcamp
+        releaseDate
+        info
         albumCover {
           url
           fileName

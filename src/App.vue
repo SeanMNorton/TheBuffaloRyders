@@ -67,4 +67,7 @@ export default {
     padding: 0;
     height: 100%;
   }
+  .no-scroll {
+    overflow: hidden;
+  }
 </style>

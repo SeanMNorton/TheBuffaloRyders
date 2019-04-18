@@ -8,7 +8,7 @@
 
 
 <script>
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 export default {
   name: 'Logo',
@@ -33,7 +33,6 @@ export default {
             padding-right: 20px;
             height: 30vw;
             max-height: 90px;
-            margin-bottom: 2vh;
             box-sizing: border-box;
             &:hover {
               opacity: 0.7;
@@ -45,7 +44,7 @@ export default {
     @media(min-width: $break-point) {
         .logo {
             img {
-                max-height: 250px;
+                max-height: 350px;
              }
         }
     }
