@@ -1,7 +1,8 @@
 <template>
   <div class="footer">
     <div class="container">
-      <router-link to="/booking"> <h2>Book Now</h2> </router-link>
+      <!-- <router-link to="/booking"> <h2>Book Now</h2> </router-link> -->
+        <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
       <div class="brands">
           <BrandLink
             :key="url.siteName"
@@ -35,6 +36,7 @@ export default {
     @import '@/assets/variables.scss';
     h2 {
       text-align: center;
+      margin: 5px 0px;
       @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
     }
     .footer {
@@ -43,21 +45,25 @@ export default {
       min-height: 50px;
       background-color: $color-background-lighter;
       box-sizing: border-box;
-      // margin-top: 200px;
     }
     .container {
       display: flex;
       margin: auto auto;
       min-height: 50px;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      // max-width: 800px;
+      padding: 2vh 0vh;
     }
     .brands {
       display: flex;
     }
     .brands > * {
       padding: 0 1vw;
+    }
+    @media (min-width: $break-point) {
+      .container {
+        justify-content: space-between;
+      }
     }
 </style>
