@@ -23,8 +23,6 @@ Vue.use(Meta);
 // Fontawesome Setup
 library.add(faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud, faSpotify, faItunes);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-
-
 // Vue app setup
 Vue.config.productionTip = false;
 new Vue({
