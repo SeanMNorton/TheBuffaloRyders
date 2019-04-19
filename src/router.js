@@ -22,11 +22,11 @@ export default new Router({
       name: 'tour',
       component: () => import(/* webpackChunkName: "tour" */ './views/Tour.vue'),
     },
-    {
-      path: '/booking',
-      name: 'booking',
-      component: () => import(/* webpackChunkName: "booking" */ './views/Booking.vue'),
-    },
+    // {
+    //   path: '/booking',
+    //   name: 'booking',
+    //   component: () => import(/* webpackChunkName: "booking" */ './views/Booking.vue'),
+    // },
     {
       path: '/*',
       component: () => import(/* webpackChunkName: "404" */ './views/FourOhFour.vue'),
