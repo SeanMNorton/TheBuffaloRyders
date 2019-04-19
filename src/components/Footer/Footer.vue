@@ -1,7 +1,6 @@
 <template>
   <div class="footer">
     <div class="container">
-      <!-- <router-link to="/booking"> <h2>Book Now</h2> </router-link> -->
         <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
       <div class="brands">
           <BrandLink
