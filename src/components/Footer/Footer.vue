@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-      <h2>Book Now</h2>
+      <router-link to="/booking"> <h2>Book Now</h2> </router-link>
       <div class="brands">
           <BrandLink
             :key="url.siteName"

@@ -23,9 +23,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "tour" */ './views/Tour.vue'),
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import(/* webpackChunkName: "dashboard" */ './views/Dashboard.vue'),
+      path: '/booking',
+      name: 'booking',
+      component: () => import(/* webpackChunkName: "booking" */ './views/Booking.vue'),
     },
     {
       path: '/*',
