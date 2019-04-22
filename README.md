@@ -12,3 +12,4 @@ This is a website for the band, The Buffalo Ryders.
 * [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/)
 * [GraphCMS](https://graphcms.com/)
 * [Vue Apollo](https://vue-apollo.netlify.com/)
+* [Vue Meta](https://github.com/nuxt/vue-meta)
