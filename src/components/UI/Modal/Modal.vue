@@ -1,13 +1,13 @@
 <template>
- <transition name="modal">
-    <div class="modal-mask" @click="$emit('close')">
-      <div class="modal-wrapper">
-        <div class="modal-container" @click.stop>
-          <div class="modal-header">
+ <transition name="fade">
+    <div class="mask" @click="$emit('close')">
+      <div class="wrapper">
+        <div class="container" @click.stop>
+          <div class="header">
               {{header}}
-              <p class="modal-default-button" @click="$emit('close')"> x </p>
+              <p class="default-button" @click="$emit('close')"> x </p>
           </div>
-          <div class="modal-body">
+          <div class="body">
             <slot> </slot>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default {
 
 <style scoped lang="scss">
   @import '@/assets/variables.scss';
-  .modal-mask {
+  .mask {
     position: fixed;
     z-index: 100;
     top: 0;
@@ -38,7 +38,7 @@ export default {
     transition: opacity .3s ease;
   }
 
-  .modal-wrapper {
+  .wrapper {
     width: 90vw;
     max-width: 850px;
     z-index: 1;
@@ -49,7 +49,7 @@ export default {
 
   }
 
-  .modal-container {
+  .container {
     display: flex;
     flex-direction: column;
     max-width: 95vw;
@@ -63,16 +63,16 @@ export default {
     box-sizing: border-box;
     overflow: hidden;
   }
-  .modal-header {
+  .header {
     padding: 0px 1em;
     @include fluid-type($min-width, $max-width, $min-sub-header-font, $max-sub-header-font );
   }
-  .modal-body {
+  .body {
     margin: 20px 0;
     overflow-y: auto;
   }
 
-  .modal-default-button {
+  .default-button {
     float: right;
     font-size: 1.2em;
     color: $color-primary;
@@ -82,20 +82,20 @@ export default {
     }
   }
 
-  .modal-enter {
+// Transitions
+  .fade-enter {
     opacity: 0;
   }
-
-  .modal-leave-active {
+  .fade-leave-active {
     opacity: 0;
   }
-
-  .modal-enter .modal-container,
-  .modal-leave-active .modal-container {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+  .fade-enter .container,
+  .fade-leave-active .container {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
   }
 
+// Media
   @media(min-height: 645px) {
     .modal-wrapper {
       bottom: 10%;

@@ -27,11 +27,11 @@ export default {
     $loadingKey: 'loading',
     albums: {
       query: GET_ALBUMS,
-      variables: { where: { AND: [] }, orderBy: 'releaseDate_DESC' },
+      variables: { where: { }, orderBy: 'releaseDate_DESC' },
     },
     metaDatas: {
       query: GET_METADATA,
-      variables: { where: { AND: [{ page: 'music' }] } },
+      variables: { where: { page: 'music' } },
     },
   },
 };

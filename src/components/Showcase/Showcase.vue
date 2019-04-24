@@ -37,7 +37,7 @@ export default {
     $loadingKey: 'loading',
     showcases: {
       query: GET_SHOWCASE,
-      variables: { where: { AND: [{ onDisplay: true }] } },
+      variables: { where: { onDisplay: true } },
     },
   },
   computed: {

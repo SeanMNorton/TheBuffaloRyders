@@ -1,8 +1,8 @@
 import { gql } from 'apollo-boost';
 
 export const GET_URLS = gql`
-  query urls($where: UrlWhereInput) {
-    urls: urls(where: $where) {
+  query($where: UrlWhereInput) {
+    urls(where: $where) {
       url
       siteName
     }
@@ -10,8 +10,8 @@ export const GET_URLS = gql`
 `;
 
 export const GET_SHOWCASE = gql`
-  query showcases($where: ShowcaseWhereInput ) {
-    showcases: showcases(where: $where) {
+  query($where: ShowcaseWhereInput ) {
+    showcases(where: $where) {
       isVideo
       url
       description
@@ -20,8 +20,8 @@ export const GET_SHOWCASE = gql`
 `;
 
 export const GET_GIGS = gql`
-  query content($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
-    gigs: gigs(first: $first, where: $where, orderBy: $orderBy) {
+  query($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
+    gigs(first: $first, where: $where, orderBy: $orderBy) {
       artist
       venue
       city
@@ -34,41 +34,41 @@ export const GET_GIGS = gql`
 `;
 
 export const GET_ALBUMS = gql`
-query content($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
-  albums: albums(where: $where, orderBy: $orderBy) {
-        id
+query($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
+  albums(where: $where, orderBy: $orderBy) {
+      id
+      title
+      spotify
+      itunes
+      bandcamp
+      releaseDate
+      info
+      albumCover {
+        handle
+        url
+        fileName
+        height
+        width
+      }
+      songs {
         title
-        spotify
-        itunes
-        bandcamp
-        releaseDate
-        info
-        albumCover {
-          handle
-          url
-          fileName
-          height
-          width
-        }
-        songs {
-          title
-          trackNumber
-        }
+        trackNumber
       }
     }
+  }
 `;
 
 export const GET_METADATA = gql`
-query content($where: MetaDataWhereInput) {
-  metaDatas: metaDatas(where: $where) {
-        id
-        title
-        description
-        url
-        image {
-          handle
-        }
-        page
+query($where: MetaDataWhereInput) {
+  metaDatas(where: $where) {
+      id
+      title
+      description
+      url
+      image {
+        handle
       }
+      page
     }
+  }
 `;

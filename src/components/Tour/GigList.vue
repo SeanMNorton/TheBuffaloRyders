@@ -31,7 +31,7 @@ export default {
       query: GET_GIGS,
       variables() {
         return {
-          where: { AND: [{ [this.isNew ? 'date_gte' : 'date_lt']: new Date() }] },
+          where: { [this.isNew ? 'date_gte' : 'date_lt']: new Date() },
           first: 25,
           orderBy: this.isNew ? 'date_ASC' : 'date_DESC',
         };

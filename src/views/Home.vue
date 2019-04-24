@@ -34,7 +34,7 @@ export default {
     $loadingKey: 'loading',
     metaDatas: {
       query: GET_METADATA,
-      variables: { where: { AND: [{ page: 'home' }] } },
+      variables: { where: { page: 'home' } },
     },
   },
 };

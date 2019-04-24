@@ -22,7 +22,7 @@ export default {
     $loadingKey: 'loading',
     metaDatas: {
       query: GET_METADATA,
-      variables: { where: { AND: [{ page: 'gigs' }] } },
+      variables: { where: { page: 'gigs' } },
     },
   },
 };

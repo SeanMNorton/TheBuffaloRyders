@@ -11,6 +11,8 @@
       <!-- <router-link to="/">Home</router-link> -->
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
+      <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Feed</a> -->
+
       <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
 
     </div>
@@ -31,7 +33,7 @@ export default {
     $loadingKey: 'loading',
     urls: {
       query: GET_URLS,
-      variables: { where: { AND: { siteName: 'merch' } } },
+      variables: { where: { siteName: 'merch' } },
     },
   },
 };
@@ -43,10 +45,11 @@ export default {
     .desktop {
       display: none;
       justify-content: space-between;
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
+      padding: 0 10px;
       margin-top: 20px;
-      @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
+      @include fluid-type($min-width, $max-width, 26px, 50px );
     }
     .bm-burger-button {
       height: 20px;
