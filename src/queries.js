@@ -12,7 +12,6 @@ export const GET_URLS = gql`
 export const GET_SHOWCASE = gql`
   query($where: ShowcaseWhereInput ) {
     showcases(where: $where) {
-      isVideo
       url
       description
     }

@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
+      <router-link to="/insta">Feed</router-link>
       <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
     </Slide>
 
@@ -11,7 +12,7 @@
       <!-- <router-link to="/">Home</router-link> -->
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
-      <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Feed</a> -->
+      <router-link to="/insta">Feed</router-link>
 
       <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
 
