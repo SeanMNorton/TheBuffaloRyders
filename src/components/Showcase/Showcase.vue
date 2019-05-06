@@ -1,12 +1,11 @@
 <template>
   <div class="container showcase">
     <div class="header">
-      <h1 v-if="showcase.isVideo">Watch NOW</h1>
-      <h1 v-if="!showcase.isVideo && showcase.url">Listen NOW</h1>
+      <h1 v-if="showcase.url">Watch NOW</h1>
       <h1>{{showcase.description}}</h1>
     </div>
 <!-- Video Frame START -->
-    <div class="iframe-container" v-if="showcase.isVideo">
+    <div class="iframe-container" v-if="showcase.url">
       <Spinner/>
       <iframe
         defer
