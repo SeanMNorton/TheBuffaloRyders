@@ -1,7 +1,7 @@
 <template>
   <div class="modal-body">
-    <div class="main-info">
 
+    <div class="main-info">
       <div id="album-box" class="album-box">
         <img v-if="album.albumCover"
           :src="'https://media.graphcms.com/resize=width:250/compress/'+album.albumCover.handle"
@@ -25,7 +25,6 @@
           <BrandLink name="bandcamp" :url="album.bandcamp"/>
         </div>
       </div>
-
     </div>
 
     <div v-if="album.spotify" class="spotify-embed">
