@@ -113,11 +113,14 @@ export default {
   }
   .spotify-embed {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
     .fulfilling-bouncing-circle-spinner {
-      position: absolute;
+      display: none;
+      position: fixed;
+      z-index: 0;
     }
     iframe {
       width: 70vw;
@@ -165,6 +168,10 @@ export default {
       iframe {
         width: 300px;
       }
+      .fulfilling-bouncing-circle-spinner {
+      display: unset;
+      position: fixed;
+    }
     }
   }
 </style>
