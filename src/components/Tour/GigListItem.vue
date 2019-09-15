@@ -32,7 +32,7 @@ export default {
     };
   },
   methods: {
-    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getDate()}`,
+    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
     openModal() {
       this.showModal = true;
       document.getElementById('body').classList.add('no-scroll');

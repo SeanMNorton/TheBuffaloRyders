@@ -25,7 +25,7 @@ export default {
   },
   props: ['gig'],
   methods: {
-    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getDate()}`,
+    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
   },
 };
 </script>
