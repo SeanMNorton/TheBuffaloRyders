@@ -28,6 +28,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "insta" */ './views/Instagram.vue'),
     },
     {
+      path: '/store',
+      name: 'store',
+      component: () => import(/* webpackChunkName: "store" */ './views/Store.vue'),
+    },
+    {
       path: '/*',
       component: () => import(/* webpackChunkName: "404" */ './views/FourOhFour.vue'),
     },

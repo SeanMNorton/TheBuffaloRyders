@@ -13,8 +13,9 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
+      <router-link to="/store">Merch</router-link>
 
-      <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
+      <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a> -->
 
     </div>
   </div>
