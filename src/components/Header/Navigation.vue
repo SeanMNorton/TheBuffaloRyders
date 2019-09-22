@@ -5,7 +5,8 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-      <router-link to="/store" onClick="location.reload(true)">Merch</router-link>
+      <a href="/store">Merch</a>
+      <!-- <router-link to="/store" onClick="location.reload(true)">Merch</router-link> -->
       <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a> -->
     </Slide>
 

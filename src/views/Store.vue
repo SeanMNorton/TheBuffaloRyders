@@ -14,9 +14,6 @@
 <script>
   export default {
     name: 'store',
-    beforeI() {
-      // location.reload(true)
-    }
   };
 </script>
 
