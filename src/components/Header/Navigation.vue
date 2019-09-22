@@ -14,7 +14,7 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-      <router-link to="/store" onClick="location.reload(true)">Merch</router-link>
+      <a href="/store">Merch</a>
       <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a> -->
 
     </div>
@@ -38,6 +38,14 @@ export default {
       variables: { where: { siteName: 'merch' } },
     },
   },
+  computed: {
+    refresh() {
+      setTimeout( () =>  {
+        console.log('running ******')
+        // location.reload(true)
+      }, 200)
+    }
+  }
 };
 </script>
 
