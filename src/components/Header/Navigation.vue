@@ -6,8 +6,6 @@
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
       <a href="/store">Merch</a>
-      <!-- <router-link to="/store" onClick="location.reload(true)">Merch</router-link> -->
-      <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a> -->
     </Slide>
 
     <div class="desktop">
@@ -16,8 +14,6 @@
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
       <a href="/store">Merch</a>
-      <!-- <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a> -->
-
     </div>
   </div>
 </template>
