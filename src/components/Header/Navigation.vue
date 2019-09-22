@@ -38,14 +38,6 @@ export default {
       variables: { where: { siteName: 'merch' } },
     },
   },
-  computed: {
-    refresh() {
-      setTimeout( () =>  {
-        console.log('running ******')
-        // location.reload(true)
-      }, 200)
-    }
-  }
 };
 </script>
 
