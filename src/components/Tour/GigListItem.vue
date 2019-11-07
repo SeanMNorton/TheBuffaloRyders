@@ -67,6 +67,7 @@ export default {
   }
   .info {
     padding: 10px 10px;
+    text-decoration: underline;
   }
   .dots {
     flex: 1;

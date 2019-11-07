@@ -31,7 +31,8 @@ export default {
       query: GET_GIGS,
       variables() {
         return {
-          where: { [this.isNew ? 'date_gte' : 'date_lt']: new Date() },
+          // date greather than or equal || date less than that of today minus one day
+          where: { [this.isNew ? 'date_gte' : 'date_lt']: new Date((new Date()).getTime() - (24 * 60 * 60 * 1000)) },
           first: 25,
           orderBy: this.isNew ? 'date_ASC' : 'date_DESC',
         };
