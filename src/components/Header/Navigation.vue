@@ -5,7 +5,7 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-      <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
+      <a href="/store">Merch</a>
     </Slide>
 
     <div class="desktop">
@@ -13,9 +13,7 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-
-      <a v-if="urls" :href="urls[0].url" target="_blank" rel="noopener noreferrer">Merch</a>
-
+      <a href="/store">Merch</a>
     </div>
   </div>
 </template>
