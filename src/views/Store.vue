@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-console */
 <template>
   <div class="container">
     <MetaData v-if="metaDatas" :data="metaDatas[0]"/>
@@ -7,30 +9,33 @@
 </template>
 
 <script>
-import { GET_METADATA } from '../queries';
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
-  export default {
-    name: 'store',
-    components: {
-      MetaData,
+import { GET_METADATA } from '../queries';
+
+export default {
+  name: 'store',
+  components: {
+    MetaData,
+  },
+  apollo: {
+    $loadingKey: 'loading',
+    metaDatas: {
+      query: GET_METADATA,
+      variables: { where: { page: 'store' } },
     },
-    apollo: {
-      $loadingKey: 'loading',
-      metaDatas: {
-        query: GET_METADATA,
-        variables: { where: { page: 'store' } },
-      },
-    },
-    beforeCreate() {
-      this.$loadScript("https://app.ecwid.com/script.js?17654854&data_platform=code&data_date=2019-09-22")
+  },
+  beforeCreate() {
+    this.$loadScript('https://app.ecwid.com/script.js?17654854&data_platform=code&data_date=2019-09-22')
       .then(() => {
-        xProductBrowser("id=my-store-17654854");
+        // eslint-disable-next-line no-undef
+        xProductBrowser('id=my-store-17654854');
       })
       .catch(() => {
-       console.log('failed to load ecwid script')
+        // eslint-disable-next-line no-console
+        console.log('failed to load ecwid script');
       });
-    },
-  };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

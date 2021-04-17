@@ -8,11 +8,13 @@
           :alt="album.title + ' Album art.'"
         >
       </div>
-      
+
       <div class="album-info">
         <p class="album-title">{{album.title}}  ({{getYear(album.releaseDate)}})</p>
         <div class="song-list">
-          <div :key="i" v-for="(song, i) in album.songs"> {{song.trackNumber}}. {{song.title}} </div>
+          <div :key="i" v-for="(song, i) in album.songs">
+            {{song.trackNumber}}. {{song.title}}
+          </div>
         </div>
 
         <div class="text">
@@ -29,7 +31,12 @@
 
     <div v-if="album.spotify" class="spotify-embed">
       <Spinner/>
-      <iframe :src="spotifyEmbededUrl" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe :src="spotifyEmbededUrl"
+        height="380"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media">
+      </iframe>
     </div>
 
   </div>
@@ -43,18 +50,18 @@ export default {
   name: 'AlbumModalBody',
   components: {
     BrandLink,
-    Spinner
+    Spinner,
   },
   props: ['album'],
   computed: {
     albumYear() {
       return this.album.relaseDate;
     },
-    
+
     spotifyEmbededUrl() {
-      var albumUrl = this.album.spotify.match(/\/album(.*)$/g)[0]
-      return 'https://open.spotify.com/embed' + albumUrl
-    }
+      const albumUrl = this.album.spotify.match(/\/album(.*)$/g)[0];
+      return `https://open.spotify.com/embed${albumUrl}`;
+    },
   },
   methods: {
     getYear: date => `${new Date(date).getFullYear()}`,
@@ -128,7 +135,7 @@ export default {
       z-index: 1;
     }
   }
-  
+
   @media(min-width: 650px) {
     .modal-body, .main-info{
       flex-direction: row;

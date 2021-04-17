@@ -9,8 +9,8 @@
 
 <script>
 import GigList from '@/components/Tour/GigList.vue';
-import { GET_METADATA } from '../queries';
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
+import { GET_METADATA } from '../queries';
 
 export default {
   name: 'tour',

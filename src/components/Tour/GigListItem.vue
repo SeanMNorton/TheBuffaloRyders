@@ -32,8 +32,8 @@ export default {
     };
   },
   methods: {
-    prettyDate(date, gig) {
-     return  `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`
+    prettyDate(date) {
+      return `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`;
     },
     openModal() {
       this.showModal = true;

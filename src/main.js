@@ -7,13 +7,13 @@ import Meta from 'vue-meta';
 
 import VueApollo from 'vue-apollo';
 import Vue from 'vue';
+import LoadScript from 'vue-plugin-load-script';
 import App from './App.vue';
 import router from './router';
 import './registerServiceWorker';
 import ApolloProvider from './apolloSetup';
 
 // script loader for ecwid
-import LoadScript from 'vue-plugin-load-script';
 
 Vue.use(LoadScript);
 

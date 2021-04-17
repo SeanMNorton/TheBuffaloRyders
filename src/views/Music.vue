@@ -9,25 +9,25 @@
 </template>
 
 <script>
-import { GET_ALBUMS, GET_METADATA } from "../queries";
-import MetaData from "@/components/UI/MetaData/MetaData.vue";
-import Album from "../components/Albums/Album.vue";
+import MetaData from '@/components/UI/MetaData/MetaData.vue';
+import { GET_ALBUMS, GET_METADATA } from '../queries';
+import Album from '../components/Albums/Album.vue';
 
 export default {
-  name: "music",
+  name: 'music',
   components: {
     Album,
     MetaData,
   },
   apollo: {
-    $loadingKey: "loading",
+    $loadingKey: 'loading',
     albums: {
       query: GET_ALBUMS,
-      variables: { where: {}, orderBy: "releaseDate_DESC" },
+      variables: { where: {}, orderBy: 'releaseDate_DESC' },
     },
     metaDatas: {
       query: GET_METADATA,
-      variables: { where: { page: "music" } },
+      variables: { where: { page: 'music' } },
     },
   },
 };

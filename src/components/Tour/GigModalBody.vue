@@ -20,7 +20,12 @@
         Info: <span class="info">{{ gig.info }}</span>
       </p>
       <br/>
-      <a class="underline" v-if="gig.ticketsUrl" :href="gig.ticketsUrl" target="_blank">Get Tickets</a>
+      <a class="underline"
+        v-if="gig.ticketsUrl"
+        :href="gig.ticketsUrl"
+        target="_blank">
+        Get Tickets
+      </a>
     </div>
   </div>
 </template>
