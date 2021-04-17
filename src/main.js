@@ -14,6 +14,7 @@ import ApolloProvider from './apolloSetup';
 
 // script loader for ecwid 
 import LoadScript from 'vue-plugin-load-script';
+
 Vue.use(LoadScript);
 
 // Apollo Setup

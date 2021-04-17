@@ -6,7 +6,7 @@
     </Modal>
 
     <div @click="openModal" class="list-item">
-      <p class="info">{{prettyDate(new Date(gig.date))}}</p>
+      <p class="info">{{prettyDate(new Date(gig.date), gig)}}</p>
       <p class="dots">{{dots()}}</p>
       <p class="info">{{gig.city}}, {{gig.state}}</p>
     </div>
@@ -32,7 +32,9 @@ export default {
     };
   },
   methods: {
-    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
+    prettyDate(date, gig) {
+     return  `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`
+    },
     openModal() {
       this.showModal = true;
       document.getElementById('body').classList.add('no-scroll');

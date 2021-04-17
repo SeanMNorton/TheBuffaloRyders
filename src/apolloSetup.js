@@ -5,7 +5,7 @@ import VueApollo from 'vue-apollo';
 
 export default () => {
   const httpLink = createHttpLink({
-    uri: 'https://api-useast.graphcms.com/v1/cjujs990c1g9r01f4jrouqtzz/master',
+    uri: 'https://api-us-east-1.graphcms.com/v2/ckn7hgin2dc7w01wag5aq3mqj/master',
   });
   const cache = new InMemoryCache();
   const apolloClient = new ApolloClient({

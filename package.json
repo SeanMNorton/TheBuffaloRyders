@@ -21,7 +21,7 @@
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
     "i": "^0.3.6",
-    "npm": "^6.9.0",
+    "npm": "^6.14.13",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.6",
     "vue-apollo": "^3.0.0-beta.28",
@@ -40,7 +40,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "fibers": "^3.1.1",
-    "sass": "^1.17.2",
+    "sass": "^1.32.10",
     "sass-loader": "^7.1.0",
     "vue-plugin-load-script": "^1.2.0",
     "vue-template-compiler": "^2.5.21"

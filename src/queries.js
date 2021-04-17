@@ -22,12 +22,12 @@ export const GET_GIGS = gql`
   query($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
     gigs(first: $first, where: $where, orderBy: $orderBy) {
       artist
-      venue
+      place
       city
       state
       info
       date
-      time
+      ticketsUrl
     }
   }
 `;

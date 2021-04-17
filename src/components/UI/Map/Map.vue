@@ -14,9 +14,11 @@
 export default {
   name: 'Map',
   props: {
-    city: String,
+    latitude: String,
+    longitude: String,
     state: String,
     place: String,
+    city: String,
   },
 
   computed: {
@@ -25,6 +27,9 @@ export default {
       + `${this.place},${this.city},${this.state}`
       + '&key='}${process.env.VUE_APP_GOOGLE_MAPS_API_KEY}`;
     },
+    // mapsURL() {
+    //   return `${'https://www.google.com/maps/embed/v1/view?key='}${process.env.VUE_APP_GOOGLE_MAPS_API_KEY}&center=${this.latitude},${this.longitude}`;
+    // },
   },
 };
 </script>
