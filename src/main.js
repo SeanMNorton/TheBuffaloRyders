@@ -12,7 +12,7 @@ import router from './router';
 import './registerServiceWorker';
 import ApolloProvider from './apolloSetup';
 
-// script loader for ecwid 
+// script loader for ecwid
 import LoadScript from 'vue-plugin-load-script';
 
 Vue.use(LoadScript);
