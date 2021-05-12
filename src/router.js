@@ -30,7 +30,16 @@ export default new Router({
     {
       path: '/store',
       name: 'store',
-      component: () => import(/* webpackChunkName: "store" */ './views/Store.vue'),
+      beforeEnter() {
+        window.location.replace('https://the-buffalo-ryders.square.site/');
+      },
+    },
+    {
+      path: '/merch',
+      name: 'merch',
+      beforeEnter() {
+        window.location.replace('https://the-buffalo-ryders.square.site/');
+      },
     },
     {
       path: '/*',

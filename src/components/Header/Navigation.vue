@@ -5,7 +5,7 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-      <a href="/store">Merch</a>
+      <a href="https://the-buffalo-ryders.square.site/">Merch</a>
     </Slide>
 
     <div class="desktop">
@@ -13,7 +13,7 @@
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
       <router-link to="/insta">Feed</router-link>
-      <a href="/store">Merch</a>
+      <a href="https://the-buffalo-ryders.square.site/">Merch</a>
     </div>
   </div>
 </template>
