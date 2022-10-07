@@ -29,8 +29,11 @@ $min-header-font: 20px;
 $max-sub-header-font: 24px;
 $min-sub-header-font: 15px;
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @return $number;
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
