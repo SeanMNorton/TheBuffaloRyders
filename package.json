@@ -21,7 +21,7 @@
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
     "i": "^0.3.6",
-    "npm": "^7.10.0",
+    "npm": "^8.11.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.6",
     "vue-apollo": "^3.0.0-beta.28",
