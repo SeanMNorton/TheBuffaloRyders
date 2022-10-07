@@ -14,7 +14,7 @@
         Artist: <span class="info">{{ gig.artist }}</span>
       </p>
       <p>
-        Venue: <span class="info">{{ gig.venue }}, {{ gig.city }} {{ gig.state }}</span>
+        Venue: <span class="info">{{ gig.place }}, {{ gig.city }} {{ gig.state }}</span>
       </p>
       <p>
         Info: <span class="info">{{ gig.info }}</span>
@@ -43,7 +43,11 @@ export default {
   props: ['gig'],
   methods: {
     prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
-    prettyTime: dateTime => `${new Date(dateTime).toLocaleTimeString('en-US', { timeStyle: 'short' })}`,
+    prettyTime(dateTime) {
+      // convert time + 12 hours... not sure what's up with time objects from graphcms
+      const time = new Date(dateTime).getTime();
+      return `${new Date(time + 12 * 60 * 60 * 1000).toLocaleTimeString('en-US', { timeStyle: 'short' })}`;
+    },
   },
 };
 </script>
