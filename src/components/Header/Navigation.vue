@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Slide class="mobile">
+    <Slide class="mobile" :closeOnNavigation="true">
       <router-link to="/">Home</router-link>
       <router-link to="/gigs">Gigs</router-link>
       <router-link to="/music">Music</router-link>
