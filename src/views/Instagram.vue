@@ -19,9 +19,6 @@ export default {
   .juicer-feed {
     padding: 20px !important;
   }
-  .juicer-feed h1.referral a {
-    display: none !important;
-  }
   .juicer-ad, .j-share  {
     display: none !important;
   }
@@ -52,10 +49,14 @@ export default {
   .j-poster h3 {
     color: white !important;
   }
-  .j-poster {
+  .j-poster, .juicer-about {
     display: none !important;
   }
+
   .juicer-feed.modern .j-image img {
     border-radius: 8px 8px 0 0 !important;
+  }
+  .j-post-overlay.juicer-feed a.juicer-button {
+    color: white !important;
   }
 </style>

@@ -21,19 +21,11 @@
 
 <script>
 import { Slide } from 'vue-burger-menu';
-import { GET_URLS } from '../../queries';
 
 export default {
   name: 'Navigation',
   components: {
     Slide,
-  },
-  apollo: {
-    $loadingKey: 'loading',
-    urls: {
-      query: GET_URLS,
-      variables: { where: { siteName: 'merch' } },
-    },
   },
 };
 </script>
