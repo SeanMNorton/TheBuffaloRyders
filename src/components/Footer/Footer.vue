@@ -1,7 +1,10 @@
 <template>
   <div class="footer">
     <div class="container">
-        <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
+      <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
+      <a class='press-kit-link' v-if="download" target="_blank" :href="download.file.url">
+        <h2>- press kit -</h2>
+      </a>
       <div class="brands">
           <BrandLink
             :key="url.siteName"
@@ -16,7 +19,7 @@
 
 
 <script>
-import { GET_URLS } from '../../queries';
+import { GET_PRESS_KIT, GET_URLS } from '../../queries';
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
 
 export default {
@@ -26,6 +29,7 @@ export default {
   },
   apollo: {
     urls: GET_URLS,
+    download: GET_PRESS_KIT,
   },
 };
 </script>
@@ -60,9 +64,17 @@ export default {
     .brands > * {
       padding: 0 1vw;
     }
+    .press-kit-link {
+      width: 100%;
+      margin-bottom: 10px;
+    }
     @media (min-width: $break-point) {
       .container {
         justify-content: space-between;
+      }
+      .press-kit-link {
+        width: unset;
+        margin-bottom: unset;
       }
     }
 </style>

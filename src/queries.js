@@ -18,6 +18,29 @@ export const GET_SHOWCASE = gql`
   }
 `;
 
+export const GET_DOWNLOADS = gql`
+  query Assets {
+    downloads {
+      id
+      name
+      file {
+        url
+      }
+    }
+  }
+`;
+
+export const GET_PRESS_KIT = gql`
+query Assets {
+  download(where: {id: "clh8137lu4ts10bk5d7zrt1om"}) {
+    id
+    name
+    file {
+      url
+    }
+  }
+}`;
+
 export const GET_GIGS = gql`
   query($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
     gigs(first: $first, where: $where, orderBy: $orderBy) {

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Press from './views/Press.vue';
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       beforeEnter() {
         window.location.replace('https://the-buffalo-ryders.square.site/');
       },
+    },
+    {
+      path: '/press',
+      name: 'press',
+      component: Press,
     },
     {
       path: '/*',
