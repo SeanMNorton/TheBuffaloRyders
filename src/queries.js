@@ -1,7 +1,7 @@
-import { gql } from 'apollo-boost';
+import { gql } from "apollo-boost";
 
 export const GET_URLS = gql`
-  query($where: UrlWhereInput) {
+  query ($where: UrlWhereInput) {
     urls(where: $where) {
       url
       siteName
@@ -10,7 +10,7 @@ export const GET_URLS = gql`
 `;
 
 export const GET_SHOWCASE = gql`
-  query($where: ShowcaseWhereInput ) {
+  query ($where: ShowcaseWhereInput) {
     showcases(where: $where) {
       url
       description
@@ -31,18 +31,19 @@ export const GET_DOWNLOADS = gql`
 `;
 
 export const GET_PRESS_KIT = gql`
-query Assets {
-  download(where: {id: "clh8137lu4ts10bk5d7zrt1om"}) {
-    id
-    name
-    file {
-      url
+  query Assets {
+    download(where: { id: "cm47ge70s8clq07iqks9bnxai" }) {
+      id
+      name
+      file {
+        url
+      }
     }
   }
-}`;
+`;
 
 export const GET_GIGS = gql`
-  query($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
+  query ($first: Int, $where: GigWhereInput, $orderBy: GigOrderByInput) {
     gigs(first: $first, where: $where, orderBy: $orderBy) {
       artist
       place
@@ -56,8 +57,8 @@ export const GET_GIGS = gql`
 `;
 
 export const GET_ALBUMS = gql`
-query($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
-  albums(where: $where, orderBy: $orderBy) {
+  query ($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
+    albums(where: $where, orderBy: $orderBy) {
       id
       title
       spotify
@@ -81,8 +82,8 @@ query($where: AlbumWhereInput, $orderBy: AlbumOrderByInput) {
 `;
 
 export const GET_METADATA = gql`
-query($where: MetaDataWhereInput) {
-  metaDatas(where: $where) {
+  query ($where: MetaDataWhereInput) {
+    metaDatas(where: $where) {
       id
       title
       description
