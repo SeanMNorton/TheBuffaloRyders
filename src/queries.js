@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { gql } from "apollo-boost";
 
 export const GET_URLS = gql`
