@@ -33,7 +33,7 @@ export const GET_DOWNLOADS = gql`
 
 export const GET_PRESS_KIT = gql`
   query Assets {
-    download(where: { id: "cm47ge70s8clq07iqks9bnxai" }) {
+    download(where: { id: "clh8137lu4ts10bk5d7zrt1om" }) {
       id
       name
       file {

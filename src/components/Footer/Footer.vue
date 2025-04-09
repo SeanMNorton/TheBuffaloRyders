@@ -2,9 +2,12 @@
   <div class="footer">
     <div class="container">
       <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
+      <div>
       <a class='press-kit-link' v-if="download" target="_blank" :href="download.file.url">
         <h2>- press kit -</h2>
       </a>
+      <h3>Booking@buffaloryders.com</h3>
+    </div>
       <div class="brands">
           <BrandLink
             :key="url.siteName"
