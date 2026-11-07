@@ -6,12 +6,11 @@
   </div>
 </template>
 
-
 <script>
 import logo from '../../assets/logo.png';
 
 export default {
-  name: 'Logo',
+  name: 'LogoComponent',
   data() {
     return {
       src: logo,
@@ -20,7 +19,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped lang="scss">
     @import '../../assets/variables.scss';

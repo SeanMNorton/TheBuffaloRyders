@@ -1,13 +1,13 @@
 <template>
   <div>
     <h1 class="gigs-header">FUTURE GIGS</h1>
-    <a href="https://www.songkick.com/artists/5189358" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="on" data-background-color="#000000" data-font-color="#ffffff" data-locale="en" data-other-artists="on" data-share-button="on" data-country-filter="off"></a>
+    <a href="https://www.songkick.com/artists/5189358" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="on" data-background-color="#000000" data-font-color="#ffffff" data-locale="en" data-other-artists="on" data-share-button="on" data-country-filter="off">The Buffalo Ryders on Songkick</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'songkick',
+  name: 'SongKick',
   mounted() {
     let songKickScript = document.getElementById('song-kick-script');
     if (songKickScript) songKickScript.remove();
@@ -19,7 +19,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';

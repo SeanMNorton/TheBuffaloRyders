@@ -7,10 +7,9 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  name: 'instagram',
+  name: 'instagramPage',
 };
 </script>
 

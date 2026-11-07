@@ -1,10 +1,15 @@
 <template>
   <div>
-    <Modal v-if="showModal" @close="close" :header="''">
+    <ModalComponent v-if="showModal" @close="close" :header="''">
       <AlbumModalBody :album="album" />
-    </Modal>
-
-    <div @click="openModal" class="album-container">
+    </ModalComponent>
+    <div
+    @click="openModal"
+    @keydown.enter="openModal"
+    @keydown.space.prevent="openModal"
+    class="album-container"
+    role="button"
+    tabindex="0">
       <img v-if="album.albumCover"
         :src="'https://media.graphcms.com/resize=width:255/compress/'+album.albumCover.handle"
         :alt="album.title + ' Album Art'"
@@ -14,15 +19,14 @@
   </div>
 </template>
 
-
 <script>
-import Modal from '../UI/Modal/Modal.vue';
+import ModalComponent from '../UI/Modal/Modal.vue';
 import AlbumModalBody from './AlbumModalBody.vue';
 
 export default {
-  name: 'album',
+  name: 'AlbumComponent',
   components: {
-    Modal,
+    ModalComponent,
     AlbumModalBody,
   },
   props: ['album'],
@@ -43,7 +47,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
   @import '@/assets/variables.scss';

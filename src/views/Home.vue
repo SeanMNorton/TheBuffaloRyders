@@ -2,7 +2,7 @@
 <template>
   <div class="home">
     <MetaData v-if="metaDatas" :data="metaDatas[0]"/>
-    <Showcase />
+    <ShowcaseComponent />
     <SongKick />
 
     <!-- OLD GIGS LIST -->
@@ -12,18 +12,18 @@
 </template>
 
 <script>
-import Showcase from '@/components/Showcase/Showcase.vue';
+import ShowcaseComponent from '@/components/Showcase/Showcase.vue';
 // import GigList from '@/components/Tour/GigList.vue';
 import SongKick from '@/components/Tour/SongKick.vue';
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
 import { GET_METADATA } from '../queries';
 
 export default {
-  name: 'home',
+  name: 'homePage',
   components: {
     // GigList,
     SongKick,
-    Showcase,
+    ShowcaseComponent,
     MetaData,
   },
   apollo: {
@@ -45,7 +45,6 @@ export default {
   // },
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';

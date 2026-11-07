@@ -32,13 +32,13 @@
 
 <script>
 import Map from '../UI/Map/Map.vue';
-import Spinner from '../UI/Spinner/Spinner.vue';
+import LoadingSpinner from '../UI/Spinner/Spinner.vue';
 
 export default {
   name: 'gigModalBody',
   components: {
     Map,
-    Spinner,
+    LoadingSpinner,
   },
   props: ['gig'],
   methods: {
