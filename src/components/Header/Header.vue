@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-      <NavigationComponent/>
-      <LogoComponent />
+    <NavigationComponent />
+    <LogoComponent />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '../../assets/variables.scss';
+    @use '../../assets/variables.scss' as *;
     .header {
         min-height: 10vh;
         max-height: 150px;

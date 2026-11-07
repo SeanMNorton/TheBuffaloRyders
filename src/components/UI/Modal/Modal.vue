@@ -5,12 +5,12 @@
         <div class="container" @click.stop @keydown.stop>
           <div class="header">
             {{ header }}
-            <button class="default-button" @click="$emit('close')" @keydown.esc="$emit('close')">
+            <button type="button" class="default-button" @click="$emit('close')" @keydown.esc="$emit('close')">
               x
             </button>
           </div>
           <div class="body">
-            <slot> </slot>
+            <slot />
           </div>
         </div>
       </div>
@@ -22,11 +22,12 @@
 export default {
   name: 'ModalComponent',
   props: ['header'],
+  emits: ['close'],
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/variables.scss";
+@use '@/assets/variables.scss' as *;
 .mask {
   position: fixed;
   z-index: 100;
@@ -88,13 +89,13 @@ export default {
 }
 
 // Transitions
-.fade-enter {
+.fade-enter-from {
   opacity: 0;
 }
 .fade-leave-active {
   opacity: 0;
 }
-.fade-enter .container,
+.fade-enter-from .container,
 .fade-leave-active .container {
   -webkit-transform: scale(0.7);
   transform: scale(0.7);

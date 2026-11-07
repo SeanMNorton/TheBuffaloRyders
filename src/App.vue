@@ -1,11 +1,11 @@
 <template>
   <div>
     <div id="app">
-        <HeaderComponent/>
-        <router-view/>
-        <div class="push"></div>
+      <HeaderComponent />
+      <router-view />
+      <div class="push" />
     </div>
-    <FooterComponent/>
+    <FooterComponent />
   </div>
 </template>
 
@@ -23,7 +23,8 @@ export default {
 </script>
 
 <style lang="scss">
-  @import './assets/variables.scss';
+  @use './assets/fonts.scss';
+  @use './assets/variables.scss' as *;
   #app {
     letter-spacing: 1.5px;
     -webkit-font-smoothing: antialiased;

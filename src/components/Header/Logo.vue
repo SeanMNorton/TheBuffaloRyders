@@ -1,8 +1,8 @@
 <template>
   <div class="logo">
-      <router-link to="/">
-        <img :src="src" :alt="alt">
-      </router-link>
+    <router-link to="/">
+      <img :src="src" :alt="alt">
+    </router-link>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '../../assets/variables.scss';
+    @use '../../assets/variables.scss' as *;
     .logo {
         display: flex;
         justify-content: center;

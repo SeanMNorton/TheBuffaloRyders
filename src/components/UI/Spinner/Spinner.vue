@@ -1,7 +1,7 @@
 <template>
   <div class="fulfilling-bouncing-circle-spinner">
-    <div class="circle"></div>
-    <div class="orbit"></div>
+    <div class="circle" />
+    <div class="orbit" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables.scss';
+@use '@/assets/variables.scss' as *;
   .fulfilling-bouncing-circle-spinner, .fulfilling-bouncing-circle-spinner * {
       box-sizing: border-box;
     }

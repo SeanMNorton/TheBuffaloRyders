@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   .juicer-feed {
     padding: 20px !important;
   }

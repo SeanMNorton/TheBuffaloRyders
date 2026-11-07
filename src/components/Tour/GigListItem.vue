@@ -5,7 +5,13 @@
       <GigModalBody :gig="gig" />
     </ModalComponent>
 
-    <div @click="openModal" class="list-item">
+    <div
+      @click="openModal"
+      @keydown.enter="openModal"
+      @keydown.space.prevent="openModal"
+      class="list-item"
+      role="button"
+      tabindex="0">
       <p class="info">{{prettyDate(new Date(gig.date), gig)}}</p>
       <p class="dots">{{dots()}}</p>
       <p class="info">{{gig.city}}, {{gig.state}}</p>
@@ -48,9 +54,8 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   .container {
     width: 100%;
     max-width: 850px;

@@ -4,53 +4,36 @@
       <h1 v-if="showcase.url">Watch NOW</h1>
       <h1>{{showcase.description}}</h1>
     </div>
-<!-- Video Frame START -->
+    <!-- Video Frame START -->
     <div class="iframe-container" v-if="showcase.url">
-      <LoadingSpinner/>
+      <LoadingSpinner />
       <iframe
         defer
         width='760'
         height='515'
-        :src='this.embededUrl'
+        :src='embededUrl'
         :title="showcase.description"
         frameborder='0'
         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowfullscreen>
-      </iframe>
+        allowfullscreen />
     </div>
-<!-- Video Frame END -->
+    <!-- Video Frame END -->
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useQuery } from '@vue/apollo-composable';
 import LoadingSpinner from '../UI/Spinner/Spinner.vue';
 import { GET_SHOWCASE } from '../../queries';
 
-export default {
-  name: 'ShowcaseComponent',
-  components: {
-    LoadingSpinner,
-  },
-  apollo: {
-    $loadingKey: 'loading',
-    showcases: {
-      query: GET_SHOWCASE,
-      variables: { where: { onDisplay: true } },
-    },
-  },
-  computed: {
-    embededUrl() {
-      return this.showcase.url.replace('watch?v=', 'embed/');
-    },
-    showcase() {
-      return this.showcases ? this.showcases[0] : {};
-    },
-  },
-};
+const { result } = useQuery(GET_SHOWCASE, { where: { onDisplay: true } });
+const showcase = computed(() => result.value?.showcases?.[0] ?? {});
+const embededUrl = computed(() => showcase.value.url.replace('watch?v=', 'embed/'));
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables.scss';
+@use '@/assets/variables.scss' as *;
   .header h1{
     margin: 5px 0px;
     @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );

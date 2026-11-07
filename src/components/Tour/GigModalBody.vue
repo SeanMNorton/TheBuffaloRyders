@@ -1,8 +1,7 @@
 <template>
   <div class="modal-body">
     <div id="map-box" class="map-box">
-      <Spinner />
-      <Map
+      <MapEmbed
         :city="gig.city"
         :place="gig.place"
         :state="gig.state"
@@ -19,11 +18,13 @@
       <p>
         Info: <span class="info">{{ gig.info }}</span>
       </p>
-      <br/>
-      <a class="underline"
+      <br />
+      <a
+        class="underline"
         v-if="gig.ticketsUrl"
         :href="gig.ticketsUrl"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
         Get Tickets
       </a>
     </div>
@@ -31,18 +32,16 @@
 </template>
 
 <script>
-import Map from '../UI/Map/Map.vue';
-import LoadingSpinner from '../UI/Spinner/Spinner.vue';
+import MapEmbed from '../UI/Map/MapEmbed.vue';
 
 export default {
   name: 'gigModalBody',
   components: {
-    Map,
-    LoadingSpinner,
+    MapEmbed,
   },
   props: ['gig'],
   methods: {
-    prettyDate: date => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
+    prettyDate: (date) => `${date.toLocaleString('en-us', { month: 'short' })} ${date.getUTCDate()}`,
     prettyTime(dateTime) {
       // convert time + 12 hours... not sure what's up with time objects from graphcms
       const time = new Date(dateTime).getTime();
@@ -53,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/variables.scss";
+@use '@/assets/variables.scss' as *;
 .underline {
   text-decoration: underline;
 }

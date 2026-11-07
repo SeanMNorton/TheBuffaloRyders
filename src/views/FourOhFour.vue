@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   h1, h2 {
     @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font );
   }

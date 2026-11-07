@@ -2,16 +2,16 @@
   <iframe
     width="280"
     height="280"
+    title="Map of the venue"
     frameborder="0"
     style="border:0"
     :src="mapsURL"
-    allowfullscreen>
-  </iframe>
+    allowfullscreen />
 </template>
 
 <script>
 export default {
-  name: 'Map',
+  name: 'MapEmbed',
   props: {
     latitude: String,
     longitude: String,
@@ -24,10 +24,10 @@ export default {
     mapsURL() {
       return `${'https://www.google.com/maps/embed/v1/search?q='
       + `${this.place},${this.city},${this.state}`
-      + '&key='}${process.env.VUE_APP_GOOGLE_MAPS_API_KEY}`;
+      + '&key='}${import.meta.env.VUE_APP_GOOGLE_MAPS_API_KEY}`;
     },
     // mapsURL() {
-    //   return `${'https://www.google.com/maps/embed/v1/view?key='}${process.env.VUE_APP_GOOGLE_MAPS_API_KEY}&center=${this.latitude},${this.longitude}`;
+    //   return `${'https://www.google.com/maps/embed/v1/view?key='}${import.meta.env.VUE_APP_GOOGLE_MAPS_API_KEY}&center=${this.latitude},${this.longitude}`;
     // },
   },
 };
