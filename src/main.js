@@ -22,7 +22,6 @@ const apolloProvider = ApolloProvider();
 Vue.use(VueApollo);
 Vue.use(Meta);
 
-
 // Fontawesome Setup
 library.add(faInstagram, faFacebook, faBandcamp, faYoutube, faSoundcloud, faSpotify, faItunes);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
@@ -32,5 +31,5 @@ new Vue({
   apolloProvider,
   router,
   // store,
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app');

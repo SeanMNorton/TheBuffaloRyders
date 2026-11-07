@@ -30,7 +30,7 @@ export default new Router({
     },
     {
       path: '/store',
-      name: 'store',
+      name: 'StorePage',
       beforeEnter() {
         window.location.replace('https://the-buffalo-ryders.square.site/');
       },

@@ -6,12 +6,11 @@
   </div>
 </template>
 
-
 <script>
 import { GET_PRESS_KIT } from '../queries';
 
 export default {
-  name: 'press',
+  name: 'pressPage',
   data() {
     return {
       loading: 0,

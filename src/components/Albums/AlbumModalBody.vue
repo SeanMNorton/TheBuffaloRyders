@@ -30,8 +30,9 @@
     </div>
 
     <div v-if="album.spotify" class="spotify-embed">
-      <Spinner/>
+      <LoadingSpinner/>
       <iframe :src="spotifyEmbededUrl"
+        :title="'spotify-embed-' + album.title"
         height="380"
         frameborder="0"
         allowtransparency="true"
@@ -44,13 +45,13 @@
 
 <script>
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
-import Spinner from '../UI/Spinner/Spinner.vue';
+import LoadingSpinner from '../UI/Spinner/Spinner.vue';
 
 export default {
   name: 'AlbumModalBody',
   components: {
     BrandLink,
-    Spinner,
+    LoadingSpinner,
   },
   props: ['album'],
   computed: {
@@ -64,11 +65,10 @@ export default {
     },
   },
   methods: {
-    getYear: date => `${new Date(date).getFullYear()}`,
+    getYear: (date) => `${new Date(date).getFullYear()}`,
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
   @import '@/assets/variables.scss';

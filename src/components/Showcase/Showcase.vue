@@ -6,7 +6,7 @@
     </div>
 <!-- Video Frame START -->
     <div class="iframe-container" v-if="showcase.url">
-      <Spinner/>
+      <LoadingSpinner/>
       <iframe
         defer
         width='760'
@@ -23,14 +23,13 @@
 </template>
 
 <script>
-import Spinner from '../UI/Spinner/Spinner.vue';
+import LoadingSpinner from '../UI/Spinner/Spinner.vue';
 import { GET_SHOWCASE } from '../../queries';
 
-
 export default {
-  name: 'showcase',
+  name: 'ShowcaseComponent',
   components: {
-    Spinner,
+    LoadingSpinner,
   },
   apollo: {
     $loadingKey: 'loading',
@@ -49,7 +48,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';

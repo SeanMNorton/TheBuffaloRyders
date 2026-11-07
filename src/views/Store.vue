@@ -37,7 +37,7 @@ import MetaData from '@/components/UI/MetaData/MetaData.vue';
 import { GET_METADATA } from '../queries';
 
 export default {
-  name: 'store',
+  name: 'StorePage',
   components: {
     MetaData,
   },

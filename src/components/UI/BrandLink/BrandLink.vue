@@ -9,7 +9,6 @@
   </a>
 </template>
 
-
 <script>
 export default {
   name: 'BrandLink',
@@ -24,7 +23,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped lang="scss">
   @import '@/assets/variables.scss';

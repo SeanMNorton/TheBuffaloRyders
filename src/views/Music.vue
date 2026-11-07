@@ -3,7 +3,7 @@
     <MetaData v-if="metaDatas" :data="metaDatas[0]" />
     <h1 class="header" style="text-align: center">Music</h1>
     <div class="albums-container">
-      <Album :key="album.id" v-for="album in albums" :album="album" />
+      <AlbumComponent :key="album.id" v-for="album in albums" :album="album" />
     </div>
   </div>
 </template>
@@ -11,12 +11,12 @@
 <script>
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
 import { GET_ALBUMS, GET_METADATA } from '../queries';
-import Album from '../components/Albums/Album.vue';
+import AlbumComponent from '../components/Albums/Album.vue';
 
 export default {
-  name: 'music',
+  name: 'musicPage',
   components: {
-    Album,
+    AlbumComponent,
     MetaData,
   },
   apollo: {

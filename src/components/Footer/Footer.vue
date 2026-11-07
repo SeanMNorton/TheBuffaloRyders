@@ -20,13 +20,12 @@
   </div>
 </template>
 
-
 <script>
 import { GET_PRESS_KIT, GET_URLS } from '../../queries';
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
 
 export default {
-  name: 'Footer',
+  name: 'FooterComponent',
   components: {
     BrandLink,
   },
@@ -36,7 +35,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped lang="scss">
     @import '@/assets/variables.scss';

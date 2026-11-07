@@ -1,9 +1,9 @@
 <template>
   <div class="container">
 
-    <Modal v-if="showModal" @close="close" header="Gig Info">
+    <ModalComponent v-if="showModal" @close="close" header="Gig Info">
       <GigModalBody :gig="gig" />
-    </Modal>
+    </ModalComponent>
 
     <div @click="openModal" class="list-item">
       <p class="info">{{prettyDate(new Date(gig.date), gig)}}</p>
@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import Modal from '../UI/Modal/Modal.vue';
+import ModalComponent from '../UI/Modal/Modal.vue';
 import GigModalBody from './GigModalBody.vue';
 
 export default {
   name: 'gigListItem',
   components: {
-    Modal,
+    ModalComponent,
     GigModalBody,
   },
   props: {

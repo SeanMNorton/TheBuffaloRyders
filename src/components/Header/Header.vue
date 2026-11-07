@@ -1,24 +1,22 @@
 <template>
   <div class="header">
-      <Navigation/>
-      <Logo />
+      <NavigationComponent/>
+      <LogoComponent />
   </div>
 </template>
 
-
 <script>
-import Navigation from '@/components/Header/Navigation.vue';
-import Logo from '@/components/Header/Logo.vue';
+import NavigationComponent from '@/components/Header/Navigation.vue';
+import LogoComponent from '@/components/Header/Logo.vue';
 
 export default {
-  name: 'Header',
+  name: 'HeaderComponent',
   components: {
-    Navigation,
-    Logo,
+    NavigationComponent,
+    LogoComponent,
   },
 };
 </script>
-
 
 <style scoped lang="scss">
     @import '../../assets/variables.scss';

@@ -18,18 +18,16 @@
   </div>
 </template>
 
-
 <script>
 import { Slide } from 'vue-burger-menu';
 
 export default {
-  name: 'Navigation',
+  name: 'NavigationComponent',
   components: {
     Slide,
   },
 };
 </script>
-
 
 <style lang="scss">
   @import '../../assets/variables.scss';
