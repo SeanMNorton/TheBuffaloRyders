@@ -1,10 +1,5 @@
-@font-face {
-  font-family: 'Suez One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Suez One'), local('SuezOne-Regular'), url(https://fonts.gstatic.com/s/suezone/v3/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2) format('woff2');
-}
+@use 'sass:color';
+@use 'sass:math';
 
 $primary-font: 'Suez One', Helvetica, monospace, sans-serif;
 $secondary-font: sans-serif;
@@ -13,7 +8,7 @@ $break-point: 850px;
 $menu-break-point: 1111px;
 
 $color-background: black;
-$color-background-lighter: lighten($color-background, 10%);
+$color-background-lighter: color.adjust($color-background, $lightness: 10%);
 $color-white: #fff;
 $color-primary: #fff;
 $color-secondary: #e4e4e4;
@@ -37,10 +32,10 @@ $min-sub-header-font: 15px;
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-font-size);
+  $u4: math.unit($max-font-size);
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {

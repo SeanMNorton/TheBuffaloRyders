@@ -4,15 +4,16 @@
       <AlbumModalBody :album="album" />
     </ModalComponent>
     <div
-    @click="openModal"
-    @keydown.enter="openModal"
-    @keydown.space.prevent="openModal"
-    class="album-container"
-    role="button"
-    tabindex="0">
-      <img v-if="album.albumCover"
-        :src="'https://media.graphcms.com/resize=width:255/compress/'+album.albumCover.handle"
-        :alt="album.title + ' Album Art'"
+      @click="openModal"
+      @keydown.enter="openModal"
+      @keydown.space.prevent="openModal"
+      class="album-container"
+      role="button"
+      tabindex="0">
+      <img
+        v-if="album.albumCover"
+        :src="`https://media.graphcms.com/resize=width:255/compress/${album.albumCover.handle}`"
+        :alt="`${album.title} Album Art`"
       >
       <h1 class="title">{{album.title}}</h1>
     </div>
@@ -49,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   .album-container {
     display: flex;
     flex-direction: column;

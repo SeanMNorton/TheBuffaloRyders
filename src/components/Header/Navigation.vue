@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu';
+import Slide from '@/components/UI/SlideMenu/SlideMenu.vue';
 
 export default {
   name: 'NavigationComponent',
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../../assets/variables.scss';
+  @use '../../assets/variables.scss' as *;
     .desktop {
       display: none;
       justify-content: space-between;

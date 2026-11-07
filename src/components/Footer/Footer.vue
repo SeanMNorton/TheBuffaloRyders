@@ -3,41 +3,37 @@
     <div class="container">
       <router-link to="/"><h2>- The Buffalo Ryders -</h2></router-link>
       <div>
-      <a class='press-kit-link' v-if="download" target="_blank" :href="download.file.url">
-        <h2>- press kit -</h2>
-      </a>
-      <h3>Booking@buffaloryders.com</h3>
-    </div>
+        <a class='press-kit-link' v-if="download" target="_blank" rel="noopener noreferrer" :href="download.file.url">
+          <h2>- press kit -</h2>
+        </a>
+        <h3>Booking@buffaloryders.com</h3>
+      </div>
       <div class="brands">
-          <BrandLink
-            :key="url.siteName"
-            v-for="url in urls"
-            :url="url.url"
-            :name="url.siteName"
-          />
+        <BrandLink
+          :key="url.siteName"
+          v-for="url in urls"
+          :url="url.url"
+          :name="url.siteName"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useQuery } from '@vue/apollo-composable';
 import { GET_PRESS_KIT, GET_URLS } from '../../queries';
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
 
-export default {
-  name: 'FooterComponent',
-  components: {
-    BrandLink,
-  },
-  apollo: {
-    urls: GET_URLS,
-    download: GET_PRESS_KIT,
-  },
-};
+const { result: urlsResult } = useQuery(GET_URLS);
+const { result: downloadResult } = useQuery(GET_PRESS_KIT);
+const urls = computed(() => urlsResult.value?.urls);
+const download = computed(() => downloadResult.value?.download);
 </script>
 
 <style scoped lang="scss">
-    @import '@/assets/variables.scss';
+    @use '@/assets/variables.scss' as *;
     h2 {
       text-align: center;
       margin: 5px 0px;

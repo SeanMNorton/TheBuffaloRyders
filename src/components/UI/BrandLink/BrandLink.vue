@@ -1,9 +1,10 @@
 <template>
   <a
     v-if="hasUrl && name !== 'merch'"
-    :href="url" target="_blank"
+    :href="url"
+    target="_blank"
     rel="noopener noreferrer"
-    :aria-label="'Vist our ' + name + '!'"
+    :aria-label="`Vist our ${name}!`"
   >
     <font-awesome-icon :icon="['fab', name]" size="2x" />
   </a>
@@ -25,7 +26,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   svg:hover {
     color: $color-secondary;
   }

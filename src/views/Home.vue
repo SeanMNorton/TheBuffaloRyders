@@ -1,7 +1,6 @@
-<!-- eslint-disable max-len -->
 <template>
   <div class="home">
-    <MetaData v-if="metaDatas" :data="metaDatas[0]"/>
+    <MetaData v-if="metaDatas" :data="metaDatas[0]" />
     <ShowcaseComponent />
     <SongKick />
 
@@ -11,43 +10,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ShowcaseComponent from '@/components/Showcase/Showcase.vue';
 // import GigList from '@/components/Tour/GigList.vue';
 import SongKick from '@/components/Tour/SongKick.vue';
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
-import { GET_METADATA } from '../queries';
+import useMetaDatas from '../composables/useMetaDatas';
 
-export default {
-  name: 'homePage',
-  components: {
-    // GigList,
-    SongKick,
-    ShowcaseComponent,
-    MetaData,
-  },
-  apollo: {
-    $loadingKey: 'loading',
-    metaDatas: {
-      query: GET_METADATA,
-      variables: { where: { page: 'home' } },
-    },
-  },
-  // data() {
-  //   return {
-  //     showGigLink: false,
-  //   };
-  // },
-  // created() {
-  //   setTimeout(() => {
-  //     this.showGigLink = true;
-  //   }, 1000);
-  // },
-};
+const metaDatas = useMetaDatas('home');
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables.scss';
+@use '@/assets/variables.scss' as *;
   h3 {
     text-align: center;
     text-decoration: underline;

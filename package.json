@@ -3,68 +3,35 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/vue-fontawesome": "^0.1.6",
-    "apollo-boost": "^0.3.1",
-    "apollo-cache-inmemory": "^1.5.1",
-    "apollo-client": "^2.5.1",
-    "apollo-link": "^1.2.11",
-    "apollo-link-http": "^1.5.14",
-    "core-js": "^3.0",
-    "dotenv": "^7.0.0",
-    "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1",
-    "register-service-worker": "^1.6.2",
-    "vue": "^2.6.6",
-    "vue-apollo": "^3.0.0-beta.28",
-    "vue-burger-menu": "^2.0.1",
-    "vue-meta": "^1.6.0",
-    "vue-plugin-load-script": "^1.2.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "@apollo/client": "^3.14.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.0.0",
+    "@unhead/vue": "^3.0.0",
+    "@vue/apollo-composable": "^4.2.2",
+    "graphql": "^16.0.0",
+    "graphql-tag": "^2.12.6",
+    "vue": "^3.5.0",
+    "vue-router": "^4.6.0"
   },
   "devDependencies": {
-    "@vue/babel-preset-app": "^5.0.8",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-pwa": "~5.0.0",
-    "@vue/cli-service": "^5.0.8",
-    "@vue/eslint-config-airbnb": "^6.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.7.1",
-    "sass": "^1.32.10",
-    "sass-loader": "10.1.1",
-    "vue-template-compiler": "^2.5.21"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/airbnb"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "@eslint/js": "^9.39.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^9.39.5",
+    "eslint-plugin-vue": "^10.12.0",
+    "globals": "^17.14.0",
+    "sass": "^1.108.1",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vue-eslint-parser": "^10.4.2",
+    "workbox-build": "^7.4.1",
+    "workbox-window": "^7.4.1"
+  }
 }

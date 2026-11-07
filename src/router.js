@@ -1,12 +1,16 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home.vue';
 import Press from './views/Press.vue';
 
-Vue.use(Router);
+// Vue Router 4 requires a component on every route; these routes only redirect off-site.
+const ExternalRedirect = { render: () => null };
+const redirectToStore = () => {
+  window.location.replace('https://the-buffalo-ryders.square.site/');
+  return false;
+};
 
-export default new Router({
-  mode: 'history',
+export default createRouter({
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -31,16 +35,14 @@ export default new Router({
     {
       path: '/store',
       name: 'StorePage',
-      beforeEnter() {
-        window.location.replace('https://the-buffalo-ryders.square.site/');
-      },
+      component: ExternalRedirect,
+      beforeEnter: redirectToStore,
     },
     {
       path: '/merch',
       name: 'merch',
-      beforeEnter() {
-        window.location.replace('https://the-buffalo-ryders.square.site/');
-      },
+      component: ExternalRedirect,
+      beforeEnter: redirectToStore,
     },
     {
       path: '/press',
@@ -48,7 +50,7 @@ export default new Router({
       component: Press,
     },
     {
-      path: '/*',
+      path: '/:pathMatch(.*)*',
       component: () => import(/* webpackChunkName: "404" */ './views/FourOhFour.vue'),
     },
   ],

@@ -8,33 +8,21 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useQuery } from '@vue/apollo-composable';
 import MetaData from '@/components/UI/MetaData/MetaData.vue';
-import { GET_ALBUMS, GET_METADATA } from '../queries';
+import useMetaDatas from '../composables/useMetaDatas';
+import { GET_ALBUMS } from '../queries';
 import AlbumComponent from '../components/Albums/Album.vue';
 
-export default {
-  name: 'musicPage',
-  components: {
-    AlbumComponent,
-    MetaData,
-  },
-  apollo: {
-    $loadingKey: 'loading',
-    albums: {
-      query: GET_ALBUMS,
-      variables: { where: {}, orderBy: 'releaseDate_DESC' },
-    },
-    metaDatas: {
-      query: GET_METADATA,
-      variables: { where: { page: 'music' } },
-    },
-  },
-};
+const metaDatas = useMetaDatas('music');
+const { result } = useQuery(GET_ALBUMS, { where: {}, orderBy: 'releaseDate_DESC' });
+const albums = computed(() => result.value?.albums);
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/variables.scss";
+@use '@/assets/variables.scss' as *;
 .header {
   @include fluid-type($min-width, $max-width, $min-header-font, $max-header-font);
 }

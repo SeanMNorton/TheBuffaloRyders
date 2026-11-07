@@ -3,9 +3,10 @@
 
     <div class="main-info">
       <div id="album-box" class="album-box">
-        <img v-if="album.albumCover"
-          :src="'https://media.graphcms.com/resize=width:250/compress/'+album.albumCover.handle"
-          :alt="album.title + ' Album art.'"
+        <img
+          v-if="album.albumCover"
+          :src="`https://media.graphcms.com/resize=width:250/compress/${album.albumCover.handle}`"
+          :alt="`${album.title} Album art.`"
         >
       </div>
 
@@ -22,22 +23,22 @@
         </div>
 
         <div class="brand-links">
-          <BrandLink name="spotify" :url="album.spotify"/>
-          <BrandLink name="itunes" :url="album.itunes"/>
-          <BrandLink name="bandcamp" :url="album.bandcamp"/>
+          <BrandLink name="spotify" :url="album.spotify" />
+          <BrandLink name="itunes" :url="album.itunes" />
+          <BrandLink name="bandcamp" :url="album.bandcamp" />
         </div>
       </div>
     </div>
 
     <div v-if="album.spotify" class="spotify-embed">
-      <LoadingSpinner/>
-      <iframe :src="spotifyEmbededUrl"
-        :title="'spotify-embed-' + album.title"
+      <LoadingSpinner />
+      <iframe
+        :src="spotifyEmbededUrl"
+        :title="`spotify-embed-${album.title}`"
         height="380"
         frameborder="0"
         allowtransparency="true"
-        allow="encrypted-media">
-      </iframe>
+        allow="encrypted-media" />
     </div>
 
   </div>
@@ -71,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/variables.scss';
+  @use '@/assets/variables.scss' as *;
   .modal-body, .main-info {
     display: flex;
     flex-direction: column;

@@ -1,13 +1,12 @@
 <template>
-    <div class="modal-mask"> </div>
+  <div class="modal-mask" />
 </template>
 
 <script>
 export default {
-  name: 'template',
+  name: 'ModalBackdrop',
 };
 </script>
-
 
 <style lang="scss" scoped>
   .modal-mask {

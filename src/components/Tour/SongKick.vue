@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables.scss';
+@use '@/assets/variables.scss' as *;
   .gigs-header {
     margin-top: 40px;
     margin-bottom: 15px;
